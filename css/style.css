@@ -1,45 +1,158 @@
-body {
-  font-family: Helvetica;
-  font-weight: 100;
-  background-color: lightgrey;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+/* Defining the base attributes for any element on the page. */
+
+* {
   margin: 0;
-}
-
-.name {
-  background-color: black;
-  padding: 20px 0 20px 20px;
-}
-.name a{
-  font-size: 40px;
-  font-weight: bolder;
+  padding: 0;
   color: white;
-  text-decoration: none;
+  background-color: black;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
+
+/*----------------------------------------*/
+
+/* Animations and attributes for the top navigation bar */
+
 .menubar {
-  background-color: rgba(105, 102, 102, 0.5);
-  backdrop-filter: blur(10px);
-  overflow: hidden;
-  text-align: right;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 100px;
+  box-shadow: 0 10px 8px black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
 }
-
-.menubar ul{
-  list-style: none;
+.logo {
+  font-size: 2em;
+  user-select: none;
 }
-
-.menubar li{
-  display: inline;
+.logo:hover{
+  cursor: default;
+  color: #AAFF00;
+  transition-duration: 1s;
 }
-
-.menubar a{
-  color: black;
-  font-weight: bold;
+.logo:not(:hover){
+  cursor: default;
+  color: white;
+  transition-duration: 1s;
+}
+.navigation a{
   text-decoration: none;
-  padding: 10px
+  position: relative;
+  font-size: 1.2em;
+  margin-left: 2.5em;
+}
+.navigation a::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -0.3em;
+  width: 3.1em;
+  height: 0.15em;
+  border-radius: 0.4em;
+  background-color: white;
+  transform: scaleX(0);
+}
+.navigation a:hover::after{
+  transform-origin: left;
+  transform: scaleX(1);
+  transition-duration: 0.5s;
+}
+.navigation a:not(:hover)::after{
+  transform-origin: right;
+  transform: scaleX(0);
+  transition-duration: 0.5s;
+}
+.navigation #loginBtn {
+  font-size: 1.2em;
+  width: 5.5em;
+  height: 2.5em;
+  background: transparent;
+  border: 0.15em solid;
+  outline: none;
+  border-radius: 0.4em;
+  cursor: pointer;
+  margin-left: 2.5em;
+}
+.navigation #loginBtn:hover{
+  background-color: white;
+  border-color: white;
+  color: black;
+  transition: 0.5s;
+}
+.navigation #loginBtn:not(:hover){
+  background-color: black;
+  color: white;
+  transition-duration: 0.5s;
 }
 
-.placeholder {
-  line-height: 1.4em;
-  text-align: center;
-  width: 50%;
-  margin: 10px auto 10px auto;
+/*----------------------------------------*/
+
+/* Desiging the contents of the landing page*/
+
+.landingPagePlaceholder {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  user-select: none;
+}
+.landingPagePlaceholder #text1{
+  font-size: 10em;
+  background-color: transparent;
+  position: absolute;
+  z-index: 5;
+  bottom: 1.3em;
+}
+.landingPagePlaceholder #text2{
+  font-size: 10em;
+  background-color: transparent;
+  position: absolute;
+  z-index: 5;
+}
+.landingPagePlaceholder #text3{
+  font-size: 10em;
+  background-color: transparent;
+  position: absolute;
+  top: 14em;
+  z-index: 5;
+}
+.landingPagePlaceholder #text4{
+  font-size: 10em;
+  background-color: transparent;
+  position: absolute;
+  top: 15em;
+  z-index: 5;
+}
+
+/* Animating the 'FREE' text to change color when hovering and vice versa. */
+
+.landingPagePlaceholder #text4:hover{
+  cursor: default;
+  color: #AAFF00;
+  transition-duration: 1s;
+}
+.landingPagePlaceholder #text4:not(:hover){
+  cursor: default;
+  color: white;
+  transition-duration: 1s;
+}
+
+/*----------------------------------------*/
+
+.landingPagePlaceholder img{
+  display: block;
+  width: 80%;
+  filter: grayscale(100%) brightness(50%);
+  margin-left: auto;
+  margin-right: auto;
+  margin: 5em;
+  position: relative;
+  top: 5em;
+  border-radius: 1em;
 }
