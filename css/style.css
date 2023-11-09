@@ -1,0 +1,51 @@
+body {
+  font-family: Helvetica;
+  font-weight: 100;
+  background-color: white;
+  margin: 0;
+}
+
+.name {
+  background-color: #19747E;
+  padding-left: 10px;
+  font-size: 40px;
+  font-weight: bolder;
+  color: black;
+  text-decoration: none;
+}
+.name a{
+  font-size: 40px;
+  font-weight: bolder;
+  color: black;
+  text-decoration: none;
+}
+.menubar {
+  background-color: #A9D6E5;
+  overflow: hidden;
+  text-align: right;
+}
+
+.menubar ul{
+  height: 50%;
+  margin: auto;
+  list-style: none;
+}
+
+.menubar li{
+  display: inline;
+  padding: 25px;
+}
+
+.menubar a{
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.menubar li:hover{
+  background-color: #19747E;
+}
+.placeholder {
+  padding: 5px 15px;
+  line-height: 1.4em;
+}
