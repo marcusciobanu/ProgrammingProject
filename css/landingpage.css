@@ -1,4 +1,8 @@
+/* Import the font used for the website. */
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+/*----------------------------------------*/
 
 /* Defining the base attributes for any element on the page. */
 
@@ -52,21 +56,20 @@
   position: absolute;
   left: 0;
   bottom: -0.3em;
-  width: 3.1em;
+  width: 0;
   height: 0.15em;
   border-radius: 0.4em;
   background-color: white;
-  transform: scaleX(0);
+  transition: 0.3s ease-in-out, right 0.3s ease-in-out; 
+  pointer-events: none; 
 }
-.navigation a:hover::after{
-  transform-origin: left;
-  transform: scaleX(1);
-  transition-duration: 0.5s;
+.navigation a:hover::after, .navigation a:focus::after {
+  width: 100%;
 }
-.navigation a:not(:hover)::after{
-  transform-origin: right;
-  transform: scaleX(0);
-  transition-duration: 0.5s;
+.navigation a::after {
+  left: auto; 
+  right: 0;
+  transition: 0.3s ease-in-out, right 0.3s ease-in-out; 
 }
 .navigation #loginBtn {
   font-size: 1.2em;
@@ -90,6 +93,12 @@
   color: white;
   transition-duration: 0.5s;
 }
+
+/*----------------------------------------*/
+
+/* Designing the login form */
+
+
 
 /*----------------------------------------*/
 
@@ -156,3 +165,5 @@
   top: 5em;
   border-radius: 1em;
 }
+
+/*----------------------------------------*/

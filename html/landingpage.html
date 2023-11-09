@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>name</title>
-  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="/css/landingpage.css">
 </head>
 
 <body>
@@ -18,9 +18,24 @@
   </header>
 
   <div class="wrapper">
-
+    <div class="formBoxLogin">
+      <h2>Login</h2>
+      <form action="#">
+        <div class="inputBox">
+          <span class="icon"><ion-icon name="mail"></ion-icon></span>
+          <input type="email">
+          <label>Email</label>
+        </div>
+        <div class="inputBox">
+          <span class="icon"><ion-icon name="key"></ion-icon></span>
+          <input type="password">
+          <label>Password</label>
+        </div>
+        <div class="rememberForgot"></div>
+      </form>
+    </div>
   </div>
-  
+
   <div class="landingPagePlaceholder">
     <img src="/html/img/gymstockimage.jpg" alt="Man lifting weight">
     <h1 id="text1">fitness.</h1>
@@ -30,5 +45,9 @@
     <img src="/html/img/gymstockimage2.jpg" alt="Rack of weights">
   </div>
 
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
 </body>
+
 </html>
