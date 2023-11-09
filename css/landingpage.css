@@ -98,8 +98,11 @@
 
 /* Designing the login form */
 
-
-
+.wrapper{
+  position: absolute;
+  top: 10em;
+  z-index: 10;
+}
 /*----------------------------------------*/
 
 /* Desiging the contents of the landing page*/
