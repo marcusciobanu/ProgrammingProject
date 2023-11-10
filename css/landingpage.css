@@ -43,7 +43,7 @@ body{
 }
 .logo:hover{
   cursor: default;
-  color: #AAFF00;
+  color: #65fe08;
   transition-duration: 1s;
 }
 .logo:not(:hover){
@@ -66,16 +66,11 @@ body{
   height: 0.15em;
   border-radius: 0.4em;
   background-color: white;
-  transition: 0.3s ease-in-out, right 0.3s ease-in-out; 
+  transition: 0.3s ease-in-out; 
   pointer-events: none; 
 }
 .navigation a:hover::after, .navigation a:focus::after {
   width: 100%;
-}
-.navigation a::after {
-  left: auto; 
-  right: 0;
-  transition: 0.3s ease-in-out, right 0.3s ease-in-out; 
 }
 .navigation #loginBtn {
   font-size: 1.2em;
@@ -99,6 +94,7 @@ body{
   color: white;
   transition-duration: 0.5s;
 }
+
 
 /*----------------------------------------*/
 
@@ -148,18 +144,56 @@ body{
   left: 0.1em;
   transform: translateY(-50%);
   pointer-events: none;
+  transition-duration: 0.5s;
+}
+.inputBox input:focus~label,
+.inputBox input:valid~label{
+  top: 0.001em;
 }
 .inputBox input{
   width: 100%;
   height: 100%;
   outline: none;
   border: none;
+  font-size: 1em;
+  padding: 0.1em 1.5em 0 0;
 }
 .inputBox .icon{
   position: absolute;
   right: 0.1em;
   top: 0.6em;
   font-size: 1.2em;
+}
+.rememberForgot{
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8em;
+  margin: -1.2em 0 2em 0;
+}
+.rememberForgot label input{
+  accent-color: white;
+  margin-right: 0.3em;
+}
+.rememberForgot a{
+  text-decoration: none;
+}
+.rememberForgot a:hover{
+  text-decoration: underline;
+}
+.btn{
+  width: 100%;
+  margin-bottom: 1.5em;
+  padding: 1em;
+  border: white solid 0.175em;
+  border-radius: 1em;
+  cursor: pointer;
+  transition-duration: 0.5s;
+}
+.btn:hover{
+  background: white;
+  color: black;
+}
+.loginRegister{
 }
 /*----------------------------------------*/
 
@@ -204,7 +238,7 @@ body{
 
 .landingPagePlaceholder #text4:hover{
   cursor: default;
-  color: #AAFF00;
+  color: #65fe08;
   transition-duration: 1s;
 }
 .landingPagePlaceholder #text4:not(:hover){
