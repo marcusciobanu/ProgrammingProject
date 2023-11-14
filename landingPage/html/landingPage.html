@@ -9,6 +9,8 @@
 
 <body>
 
+<!-- Content for menubar -->
+
   <header class="menubar">
     <h2 class="logo">fitness tracker</h2>
     <nav class="navigation">
@@ -17,6 +19,8 @@
     </nav>
   </header>
   
+<!-- Content for login form -->
+
   <div class="wrapper">
     <span class="closeButton">
       <ion-icon name="close-sharp"></ion-icon>
@@ -44,7 +48,39 @@
         </div>
       </form>
     </div>
+    
+<!-- Content for register form -->
+
+    <div class="registerForm">
+      <h2>Register</h2>
+      <form action="#">
+        <div class="inputBox">
+          <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+          <input type="text" required>
+          <label>Username</label>
+        </div>
+        <div class="inputBox">
+          <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+          <input type="email" required>
+          <label>Email</label>
+        </div>
+        <div class="inputBox">
+          <span class="icon"><ion-icon name="key-outline"></ion-icon></span>
+          <input type="password" required>
+          <label>Password</label>
+        </div>
+        <div class="rememberForgot">
+          <label><input type="checkbox"> Remember me!</label>
+        </div>
+        <button type="submit" class="btn">Create Account</button>
+        <div class="loginRegister">
+          Already have an account?<a href="#" class="loginLink">Login!</a>
+        </div>
+      </form>
+    </div>
   </div>
+
+<!-- Main bulk content for the landing page -->
 
   <div class="landingPagePlaceholder">
     <img src="/landingPage/html/img/gymstockimage.jpg" alt="Man lifting weight">
@@ -54,6 +90,9 @@
     <h1 id="text4">FREE.</h1>
     <img src="/landingPage/html/img/gymstockimage2.jpg" alt="Rack of weights">
   </div>
+
+<script src="/landingPage/js/landingPage.js"></script>
+<!-- Script to access icons used in login and register forms -->
 
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

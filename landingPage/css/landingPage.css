@@ -2,8 +2,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
-/*----------------------------------------*/
-
 /* Defining the base attributes for any element on the page. */
 
 * {
@@ -19,8 +17,6 @@ body{
   background: black;
   color: white;
 }
-
-/*----------------------------------------*/
 
 /* Animations and attributes for the top navigation bar */
 
@@ -97,9 +93,7 @@ body{
 }
 
 
-/*----------------------------------------*/
-
-/* Designing the login form */
+/* Designing the login form and the register form */
 
 .wrapper{
   position: fixed;
@@ -115,16 +109,15 @@ body{
   justify-content: center;
   align-items: center;
   z-index: 10;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
-.wrapper .closeButton{
+.closeButton{
   position: absolute;
   top: 0;
   right: 0;
   background-color: transparent;
   width: 1.5em;
   height: 1.5em;
-  background-color: transparent;
   color: white;
   font-size: 2em;
   display: flex;
@@ -133,12 +126,13 @@ body{
   border-bottom-left-radius: 20px;
   transition-duration: 0.5s;
 }
-.wrapper .closeButton:hover{
+.closeButton:hover {
   cursor: pointer;
   background-color: white;
   color: black;
 }
-.loginForm{
+.loginForm,
+.registerForm{
   width: 70%;
   padding: 1em;
   background: transparent;
@@ -146,10 +140,25 @@ body{
   flex-direction: column;
   z-index: 11;
 }
-.loginForm *{
+
+/*  */
+
+.loginForm{
+  /* display: none; */
+}
+.registerForm{
+  position: absolute;
+  transform: translateX(30em);
+}
+
+/*  */
+
+.loginForm *,
+.registerForm *{
   background: transparent;
 }
-.loginForm h2{
+.loginForm h2,
+.registerForm h2{
   font-size: 2em;
   text-align: center;
 }
@@ -173,6 +182,7 @@ body{
   top: 0.001em;
 }
 .inputBox input{
+  color: white;
   width: 100%;
   height: 100%;
   outline: none;
@@ -218,7 +228,8 @@ body{
   background: white;
   color: black;
 }
-.loginRegister{
+.loginRegister,
+.loginLink{
   width: 100%;
   font-size: 0.9em;
   display: flex;
@@ -233,8 +244,6 @@ body{
 .loginRegister a:hover{
   text-decoration: underline;
 }
-
-/*----------------------------------------*/
 
 /* Desiging the contents of the landing page*/
 
@@ -287,7 +296,7 @@ body{
   transition-duration: 1s;
 }
 
-/*----------------------------------------*/
+/* Styling the images on the landing page  */
 
 .landingPagePlaceholder img{
   width: 80%;
@@ -299,5 +308,3 @@ body{
   top: 5em;
   border-radius: 1em;
 }
-
-/*----------------------------------------*/
