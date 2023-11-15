@@ -22,6 +22,7 @@ loginLink.addEventListener('click', ()=> {
 
 loginBtn.addEventListener('click', ()=> {
   wrapper.classList.add('popup');
+  wrapper.classList.remove('active')
 });
 
 // Detects when user clicks on cross icon and removes popup class from .wrapper
