@@ -69,7 +69,7 @@ body{
 .navigation a:hover::after, .navigation a:focus::after {
   width: 100%;
 }
-.navigation #loginBtn {
+.navigation .loginBtn {
   font-size: 1.2em;
   width: 5.5em;
   height: 2.5em;
@@ -80,13 +80,13 @@ body{
   cursor: pointer;
   margin-left: 2.5em;
 }
-.navigation #loginBtn:hover{
+.navigation .loginBtn:hover{
   background-color: white;
   border-color: white;
   color: black;
   transition: 0.5s;
 }
-.navigation #loginBtn:not(:hover){
+.navigation .loginBtn:not(:hover){
   background-color: black;
   color: white;
   transition-duration: 0.5s;
@@ -109,7 +109,12 @@ body{
   justify-content: center;
   align-items: center;
   z-index: 10;
-  /* overflow: hidden; */
+  overflow: hidden;
+  transform: scale(0);
+  transition: transform .5s ease, height .2s ease;
+}
+.wrapper.popup{
+  transform: scale(1);
 }
 .closeButton{
   position: absolute;
@@ -140,19 +145,23 @@ body{
   flex-direction: column;
   z-index: 11;
 }
-
-/*  */
-
-.loginForm{
-  /* display: none; */
+.wrapper .loginForm{
+  transition: .18s ease;
+  transform: translateX(0);
+}
+.wrapper.active .loginForm{
+  transition: .18s ease;
+  transform: translateX(-30em);
 }
 .registerForm{
   position: absolute;
+  transition: .18s ease;
   transform: translateX(30em);
 }
-
-/*  */
-
+.wrapper.active .registerForm{
+  transition: .18s ease;
+  transform: translateX(0);
+}
 .loginForm *,
 .registerForm *{
   background: transparent;
@@ -243,6 +252,17 @@ body{
 }
 .loginRegister a:hover{
   text-decoration: underline;
+}
+.registerForm .loginRegister{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.registerForm .loginRegister p{
+  width: 25em;
 }
 
 /* Desiging the contents of the landing page*/
