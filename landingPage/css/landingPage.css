@@ -328,3 +328,5 @@ body{
   top: 5em;
   border-radius: 1em;
 }
+
+/* In terms of efficiency and conciseness of code, this is very bloated. I could have accomplished the same thing in a much sleeker way, but for a first attempt it will suffice. */
