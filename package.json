@@ -1,23 +1,16 @@
 {
   "name": "europafitness",
   "version": "1.0.0",
-  "description": "Fitness website that tracks workouts and meals",
+  "description": "Fitness tracker website",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "devStart": "nodemon server.js"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/marcusciobanu/europaFitness"
+    "url": "git+https://github.com/marcusciobanu/europaFitness.git"
   },
-  "keywords": [
-    "fitness",
-    "website",
-    "javascript",
-    "html",
-    "css"
-  ],
   "author": "Marcus Ciobanu",
   "license": "ISC",
   "bugs": {
@@ -25,13 +18,13 @@
   },
   "homepage": "https://github.com/marcusciobanu/europaFitness#readme",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.3.1",
     "ejs": "^3.1.9",
     "express": "^4.18.2",
-    "express-ejs-layouts": "^2.5.1",
-    "mongoose": "^8.0.1"
-  },
-  "devDependencies": {
-    "dotenv": "^16.3.1",
-    "nodemon": "^3.0.1"
+    "jsonwebtoken": "^9.0.2",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.7"
   }
 }
