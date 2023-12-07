@@ -1,2 +1,2 @@
-const express = require('express');
-const register = require('./register')
+const express = require("express");
+const register = require("./register");
