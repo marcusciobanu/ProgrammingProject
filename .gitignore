@@ -1,3 +1,4 @@
 # Files to be ignored from commits to the git repository
 
 .DS_Store
+.idea
