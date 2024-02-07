@@ -4,7 +4,7 @@ import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# SECURITY WARNING: keep the secret key used in production secret!
+# SECURITY WARNING: keep secret!
 SECRET_KEY = 'django-insecure--rh182vr5u$)p@_0d5!6mx==rua1un(t%7f2u3b=6fbm(lv64f'
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -22,6 +22,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # my own apps start from here
+    'index.apps.IndexConfig',
+    'login.apps.LoginConfig',
 ]
 
 MIDDLEWARE = [
@@ -87,14 +90,14 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/London'
 
 USE_I18N = True
 
 USE_TZ = True
 
 
-# Static files (CSS, JavaScript, Images)
+# Static files
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
