@@ -47,28 +47,6 @@ body{
   color: white;
   transition-duration: 1s;
 }
-.navigation a{
-  color: white;
-  text-decoration: none;
-  position: relative;
-  font-size: 1.2em;
-  margin-left: 2.5em;
-}
-.navigation a::after{
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -0.3em;
-  width: 0;
-  height: 0.15em;
-  border-radius: 0.4em;
-  background-color: white;
-  transition: 0.3s ease-in-out; 
-  pointer-events: none; 
-}
-.navigation a:hover::after, .navigation a:focus::after {
-  width: 100%;
-}
 .navigation .loginBtn {
   font-size: 1.2em;
   width: 5.5em;
@@ -90,179 +68,6 @@ body{
   background-color: black;
   color: white;
   transition-duration: 0.5s;
-}
-
-
-/* Designing the login form and the register form */
-
-.wrapper{
-  position: fixed;
-  top: 10em;
-  width: 25em;
-  height: 35em;
-  background: transparent;
-  backdrop-filter: blur(20px);
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
-  border: 0.15em white solid;
-  border-radius: 2em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 10;
-  overflow: hidden;
-  transform: scale(0);
-  transition: transform .5s ease, height .2s ease;
-}
-.wrapper.popup{
-  transform: scale(1);
-}
-.closeButton{
-  position: absolute;
-  top: 0;
-  right: 0;
-  background-color: transparent;
-  width: 1.5em;
-  height: 1.5em;
-  color: white;
-  font-size: 2em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-bottom-left-radius: 20px;
-  transition-duration: 0.5s;
-}
-.closeButton:hover {
-  cursor: pointer;
-  background-color: white;
-  color: black;
-}
-.loginForm,
-.registerForm{
-  width: 70%;
-  padding: 1em;
-  background: transparent;
-  display: flex;
-  flex-direction: column;
-  z-index: 11;
-}
-.wrapper .loginForm{
-  transition: .18s ease;
-  transform: translateX(0);
-}
-.wrapper.active .loginForm{
-  transition: .18s ease;
-  transform: translateX(-30em);
-}
-.registerForm{
-  position: absolute;
-  transition: .18s ease;
-  transform: translateX(30em);
-}
-.wrapper.active .registerForm{
-  transition: .18s ease;
-  transform: translateX(0);
-}
-.loginForm *,
-.registerForm *{
-  background: transparent;
-}
-.loginForm h2,
-.registerForm h2{
-  font-size: 2em;
-  text-align: center;
-}
-.inputBox{
-  position: relative;
-  width: 100%;
-  height: 3em;
-  border-bottom: 0.1em solid white;
-  margin: 30px 0;
-}
-.inputBox label{
-  position: absolute;
-  top: 50%;
-  left: 0.1em;
-  transform: translateY(-50%);
-  pointer-events: none;
-  transition-duration: 0.5s;
-}
-.inputBox input:focus~label,
-.inputBox input:valid~label{
-  top: 0.001em;
-}
-.inputBox input{
-  color: white;
-  width: 100%;
-  height: 100%;
-  outline: none;
-  border: none;
-  font-size: 1em;
-  padding: 0.1em 1.5em 0 0;
-}
-.inputBox .icon{
-  position: absolute;
-  right: 0.1em;
-  top: 0.6em;
-  font-size: 1.2em;
-}
-.rememberForgot{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  font-size: 0.8em;
-  margin: -1.2em 0 2em 0;
-}
-.rememberForgot label input{
-  accent-color: white;
-  margin-right: 0.3em;
-}
-.rememberForgot a{
-  color: white;
-  text-decoration: none;
-}
-.rememberForgot a:hover{
-  text-decoration: underline;
-}
-.btn{
-  color: white;
-  width: 100%;
-  margin-bottom: 1.5em;
-  padding: 1em;
-  border: white solid 0.175em;
-  border-radius: 1em;
-  cursor: pointer;
-  transition-duration: 0.5s;
-}
-.btn:hover{
-  background: white;
-  color: black;
-}
-.loginRegister,
-.loginLink{
-  width: 100%;
-  font-size: 0.9em;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.loginRegister a{
-  color: white;
-  font-weight: 600;
-  text-decoration: none;
-}
-.loginRegister a:hover{
-  text-decoration: underline;
-}
-.registerForm .loginRegister{
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.registerForm .loginRegister p{
-  width: 25em;
 }
 
 /* Desiging the contents of the landing page*/
@@ -329,4 +134,8 @@ body{
   border-radius: 1em;
 }
 
-/* In terms of efficiency and conciseness of code, this is very bloated. I could have accomplished the same thing in a much sleeker way, but for a first attempt it will suffice. */
+/*
+In terms of efficiency and conciseness of code, this is very bloated.
+I could have accomplished the same thing in a much sleeker way,
+but for a first attempt it will suffice.
+*/

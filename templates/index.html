@@ -1,112 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Homepage</title>
-    <link rel="stylesheet" href="/public/styles/index.css" />
-  </head>
+{% load static %}
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>welcome to europa!</title>
+        <link rel="stylesheet" href="{% static 'styles/index.css' %}" />
+    </head>
 
-  <body>
-    <!-- Content for menubar -->
+    <body>
+        <!-- Content for menubar -->
+        <header class="menubar">
+            <h2 class="logo">europa fitness</h2>
+            <nav class="navigation">
+            <button class="loginBtn">Login</button>
+            </nav>
+        </header>
 
-    <header class="menubar">
-      <h2 class="logo">europa fitness</h2>
-      <nav class="navigation">
-        <a href="">Home</a>
-        <button class="loginBtn">Login</button>
-      </nav>
-    </header>
+        <!-- Main bulk content for the landing page -->
 
-    <!-- Content for login form -->
-
-    <div class="wrapper">
-      <span class="closeButton">
-        <ion-icon name="close-sharp"></ion-icon>
-      </span>
-      <div class="loginForm">
-        <h2>Login</h2>
-        <form onsubmit="return false;" id="loginForm">
-          <div class="inputBox">
-            <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
-            <input type="email" name="email" required />
-            <label>Email</label>
-          </div>
-          <div class="inputBox">
-            <span class="icon"><ion-icon name="key-outline"></ion-icon></span>
-            <input type="password" name="password" required />
-            <label>Password</label>
-          </div>
-          <div class="rememberForgot">
-            <label><input type="checkbox" /> Remember me!</label>
-            <a href="#">Forgot Password?</a>
-          </div>
-          <button type="submit" class="btn">Login</button>
-          <div class="loginRegister">
-            Don't have an account?
-            <a href="#" class="registerLink">Register!</a>
-          </div>
-        </form>
-      </div>
-
-      <!-- Content for register form -->
-
-      <div class="registerForm">
-        <h2>Register</h2>
-        <form onsubmit="return false;" id="registerForm">
-          <div class="inputBox">
-            <span class="icon"
-              ><ion-icon name="person-outline"></ion-icon
-            ></span>
-            <input type="text" name="username" required />
-            <label>Username</label>
-          </div>
-          <div class="inputBox">
-            <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
-            <input type="email" name="email" required />
-            <label>Email</label>
-          </div>
-          <div class="inputBox">
-            <span class="icon"><ion-icon name="key-outline"></ion-icon></span>
-            <input type="password" name="password" required />
-            <label>Password</label>
-          </div>
-          <div class="rememberForgot">
-            <label><input type="checkbox" /> Remember me!</label>
-          </div>
-          <button type="submit" class="btn">Create Account</button>
-          <div class="loginRegister">
-            <p>Have an account?</p>
-            <a href="#" class="loginLink">Login!</a>
-          </div>
-        </form>
-      </div>
-    </div>
-
-    <!-- Main bulk content for the landing page -->
-
-    <div class="landingPagePlaceholder">
-      <img src="/public/img/gymstockimage.jpg" alt="Man lifting weight" />
-      <h1 id="text1">exercise.</h1>
-      <h1 id="text2">diet.</h1>
-      <h1 id="text3">all for</h1>
-      <h1 id="text4">FREE.</h1>
-      <img src="/public/img/gymstockimage2.jpg" alt="Rack of weights" />
-    </div>
-
-    <!-- Main script for the landing page -->
-
-    <script src="/public/js/index.js"></script>
-
-    <!-- Script to access icons used in login and register forms -->
-
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-    ></script>
-  </body>
+        <div class="landingPagePlaceholder">
+            <img src='{% static 'img/gymstockimage.jpg' %}' alt="Man lifting weights">
+            <h1 id="text1">exercise.</h1>
+            <h1 id="text2">diet.</h1>
+            <h1 id="text3">all for</h1>
+            <h1 id="text4">FREE.</h1>
+            <img src='{% static 'img/gymstockimage2.jpg' %}' alt="Rack of weights">
+        </div>
+    </body>
+    <script type="javascript" src="{% static 'js/index.js' %}"></script>
 </html>
