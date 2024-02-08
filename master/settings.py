@@ -25,6 +25,7 @@ INSTALLED_APPS = [
     # my own apps start below
     'index.apps.IndexConfig',
     'login.apps.LoginConfig',
+    'register.apps.RegisterConfig'
 ]
 
 MIDDLEWARE = [
