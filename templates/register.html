@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Register for an account</title>
+    <link rel="stylesheet" href="{% static 'register/styles/register.css' %}">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+    <div class="wrapper">
+        <form action="">
+            <h1>Registration</h1>
+            <div class="inputbox">
+                <div class="inputfield">
+                    <input type="text" placeholder="Full Name" required>
+                    <i class='bx bxs-user'></i>
+                </div>
+                <div class="inputfield">
+                    <input type="text" placeholder="Username" required>
+                    <i class='bx bxs-user'></i>
+                </div>
+            </div>
+            <div class="inputbox">
+                <div class="inputfield">
+                    <input type="email" placeholder="Email" required>
+                    <i class='bx bxs-envelope'></i>
+                </div>
+                <div class="inputfield">
+                    <input type="number" placeholder="Phone Number" required>
+                    <i class='bx bxs-phone'></i>
+                </div>
+            </div>
+            <div class="inputbox">
+                <div class="inputfield">
+                    <input type="password" placeholder="Password" required>
+                    <i class='bx bxs-key'></i>
+                </div>
+                <div class="inputfield">
+                    <input type="password" placeholder="Confirm Password" required>
+                    <i class='bx bxs-key'></i>
+                </div>
+            </div>
+            <label>Already have an account? <a href="../login">Click here!</a></label>
+            <button type="submit" class="button">Register</button>
+        </form>
+    </div>
+</body>
+</html>
