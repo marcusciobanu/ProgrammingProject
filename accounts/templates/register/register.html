@@ -8,11 +8,18 @@
     <title>Register for an account</title>
     <link rel="stylesheet" href="{% static 'register/styles/register.css' %}">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="{% static 'styles/header.css' %}">
 
 </head>
 <body>
+    <header class="menubar">
+        <h2 class="logo">europa fitness</h2>
+        <nav class="navigation">
+            <a href="../"><button class="home">Home</button></a>
+        </nav>
+    </header>
     <div class="wrapper">
-        <form action="">
+        <form method="post" action="">
             <h1>Registration</h1>
             <div class="inputbox">
                 <div class="inputfield">
@@ -44,7 +51,7 @@
                     <i class='bx bxs-key'></i>
                 </div>
             </div>
-            <label>Already have an account? <a href="../login">Click here!</a></label>
+            <label>Already have an account? <a href="../login">Login</a></label>
             <button type="submit" class="button">Register</button>
         </form>
     </div>

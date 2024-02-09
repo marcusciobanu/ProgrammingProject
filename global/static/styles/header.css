@@ -1,0 +1,51 @@
+/* Animations and attributes for the top navigation bar */
+
+.menubar {
+    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    box-shadow: 0 10px 8px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.logo {
+    font-size: 2em;
+    user-select: none;
+}
+.logo:hover{
+    cursor: default;
+    color: #afeeee;
+    transition-duration: 1s;
+}
+.logo:not(:hover){
+    cursor: default;
+    color: white;
+    transition-duration: 1s;
+}
+.navigation .home {
+    font-size: 1.2em;
+    width: 5.5em;
+    height: 2.5em;
+    background: transparent;
+    border: 0.15em solid;
+    outline: none;
+    border-radius: 0.4em;
+    cursor: pointer;
+    margin-left: 2.5em;
+}
+.navigation .home:hover{
+    background-color: white;
+    border-color: white;
+    color: black;
+    transition: 0.5s;
+}
+.navigation .home:not(:hover){
+    background-color: transparent;
+    color: white;
+    transition-duration: 0.5s;
+}
