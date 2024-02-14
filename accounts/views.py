@@ -39,4 +39,5 @@ def registerpage(request):
 
 
 def dashboard(request):
-    return render(request, 'dashboard/dashboard.html')
+    sessionkey = request.session.session_key
+    return render(request, 'dashboard/dashboard.html', {'sessionid': sessionkey})
