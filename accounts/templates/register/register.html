@@ -19,35 +19,36 @@
         </nav>
     </header>
     <div class="wrapper">
-        <form method="post" action="">
+        <form method="post" action="{% url 'registerpage' %}">
+            {% csrf_token %}
             <h1>Registration</h1>
             <div class="inputbox">
                 <div class="inputfield">
-                    <input type="text" placeholder="Full Name" required>
+                    <input type="text" name="{{ form.username.name }}" placeholder="Username" required>
                     <i class='bx bxs-user'></i>
                 </div>
                 <div class="inputfield">
-                    <input type="text" placeholder="Username" required>
+                    <input type="text" name="{{ form.first_name.name }}" placeholder="Forename" required>
                     <i class='bx bxs-user'></i>
                 </div>
             </div>
             <div class="inputbox">
                 <div class="inputfield">
-                    <input type="email" placeholder="Email" required>
+                    <input type="email" name="{{ form.email.name }}" placeholder="Email" required>
                     <i class='bx bxs-envelope'></i>
                 </div>
                 <div class="inputfield">
-                    <input type="number" placeholder="Phone Number" required>
-                    <i class='bx bxs-phone'></i>
+                    <input type="text" name="{{ form.last_name.name }}" placeholder="Surname" required>
+                    <i class='bx bxs-user'></i>
                 </div>
             </div>
             <div class="inputbox">
                 <div class="inputfield">
-                    <input type="password" placeholder="Password" required>
+                    <input type="password" name="{{ form.password1.name }}" placeholder="Password" required>
                     <i class='bx bxs-key'></i>
                 </div>
                 <div class="inputfield">
-                    <input type="password" placeholder="Confirm Password" required>
+                    <input type="password" name="{{ form.password2.name }}" placeholder="Confirm Password" required>
                     <i class='bx bxs-key'></i>
                 </div>
             </div>
