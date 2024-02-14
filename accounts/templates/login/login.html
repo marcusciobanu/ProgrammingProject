@@ -18,14 +18,15 @@
         </nav>
     </header>
         <div class="wrapper">
-            <form action="">
+            <form method="post" action="{% url 'loginpage' %}">
+                {% csrf_token %}
                 <h1>Login</h1>
                 <div class="inputbox">
-                    <input type="text" placeholder="Username" required>
+                    <input type="text" name="{{ form.username.name }}" placeholder="Username" required>
                     <i class='bx bxs-user'></i>
                 </div>
                 <div class="inputbox">
-                    <input type="password" placeholder="Password" required>
+                    <input type="password" name="{{ form.password.name }}" placeholder="Password" required>
                     <i class='bx bxs-key'></i>
                 </div>
                 <div class="rememberForgot">
