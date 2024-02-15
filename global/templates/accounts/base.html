@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'styles/header.css' %}" />
+    <link rel="stylesheet" href="{% block style %}{% endblock %}">
+    <link rel="stylesheet" href="{% block icon %}https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css{% endblock %}">
+</head>
+<body>
+    <header class="menubar">
+            <h2 class="logo">europa fitness</h2>
+            <nav class="navigation">
+                <button class="btn" name="login">Login</button>
+                <button class="btn" name="register">Register</button>
+                <button class="btn" name="home">Home</button>
+            </nav>
+        </header>
+    {% block content %}
+    {% endblock %}
+    <script src="{% static 'js/header.js' %}"></script>
+    <script src="{% block script %}{% endblock %}"></script>
+</body>
+</html>

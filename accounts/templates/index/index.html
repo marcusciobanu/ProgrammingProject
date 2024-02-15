@@ -1,31 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "accounts/base.html" %}
 {% load static %}
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>welcome to europa!</title>
-        <link rel="stylesheet" href="{% static 'index/styles/index.css' %}" />
-    </head>
-    <body>
-        <!-- Content for menubar -->
-        <header class="menubar">
-            <h2 class="logo">europa fitness</h2>
-            <nav class="navigation">
-            <button class="loginBtn">Login</button>
-            </nav>
-        </header>
-
-        <!-- Main bulk content for the landing page -->
-
-        <div class="landingPagePlaceholder">
-            <img src='{% static 'index/img/gymstockimage.jpg' %}' alt="Man lifting weights">
-            <h1 id="text1">exercise.</h1>
-            <h1 id="text2">diet.</h1>
-            <h1 id="text3">all for</h1>
-            <h1 id="text4">FREE.</h1>
-            <img src='{% static 'index/img/gymstockimage2.jpg' %}' alt="Rack of weights">
-        </div>
-        <script src="{% static 'index/js/index.js' %}"></script>
-    </body>
-</html>
+{% block title %}welcome to europa!{% endblock %}
+{% block style %}{% static 'index/styles/index.css' %}{% endblock %}
+{% block content %}
+<div class="landingPagePlaceholder">
+    <img src='{% static 'index/img/gymstockimage.jpg' %}' alt="Man lifting weights">
+    <h1 id="text1">exercise.</h1>
+    <h1 id="text2">diet.</h1>
+    <h1 id="text3">all for</h1>
+    <h1 id="text4">FREE.</h1>
+    <img src='{% static 'index/img/gymstockimage2.jpg' %}' alt="Rack of weights">
+</div>
+{% endblock %}

@@ -1,8 +1,4 @@
-/* Import the font used for the website. */
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
-
-/* Defining the base attributes for any element on the page. */
 
 * {
   margin: 0;
@@ -10,6 +6,7 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
+
 body{
   display: flex;
   justify-content: center;
@@ -17,60 +14,6 @@ body{
   background: black;
   color: white;
 }
-
-/* Animations and attributes for the top navigation bar */
-
-.menubar {
-  background-color: black;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 20px 100px;
-  box-shadow: 0 10px 8px black;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 100;
-}
-.logo {
-  font-size: 2em;
-  user-select: none;
-}
-.logo:hover{
-  cursor: default;
-  color: #afeeee;
-  transition-duration: 1s;
-}
-.logo:not(:hover){
-  cursor: default;
-  color: white;
-  transition-duration: 1s;
-}
-.navigation .loginBtn {
-  font-size: 1.2em;
-  width: 5.5em;
-  height: 2.5em;
-  background: transparent;
-  border: 0.15em solid;
-  outline: none;
-  border-radius: 0.4em;
-  cursor: pointer;
-  margin-left: 2.5em;
-}
-.navigation .loginBtn:hover{
-  background-color: white;
-  border-color: white;
-  color: black;
-  transition: 0.5s;
-}
-.navigation .loginBtn:not(:hover){
-  background-color: black;
-  color: white;
-  transition-duration: 0.5s;
-}
-
-/* Desiging the contents of the landing page*/
 
 .landingPagePlaceholder {
   background-color: black;
@@ -80,6 +23,7 @@ body{
   align-items: center;
   user-select: none;
 }
+
 .landingPagePlaceholder #text1{
   font-size: 10em;
   background-color: transparent;
@@ -87,12 +31,14 @@ body{
   z-index: 5;
   bottom: 1.3em;
 }
+
 .landingPagePlaceholder #text2{
   font-size: 10em;
   background-color: transparent;
   position: absolute;
   z-index: 5;
 }
+
 .landingPagePlaceholder #text3{
   font-size: 10em;
   background-color: transparent;
@@ -100,6 +46,7 @@ body{
   top: 14em;
   z-index: 5;
 }
+
 .landingPagePlaceholder #text4{
   font-size: 10em;
   background-color: transparent;
@@ -108,34 +55,23 @@ body{
   z-index: 5;
 }
 
-/* Animating the 'FREE' text to change color when hovering and vice versa. */
-
 .landingPagePlaceholder #text4:hover{
   cursor: default;
   color: #afeeee;
   transition-duration: 1s;
 }
+
 .landingPagePlaceholder #text4:not(:hover){
   cursor: default;
   color: white;
   transition-duration: 1s;
 }
 
-/* Styling the images on the landing page  */
-
 .landingPagePlaceholder img{
   width: 80%;
   filter: grayscale(100%) brightness(50%);
-  margin-left: auto;
-  margin-right: auto;
   margin: 5em;
   position: relative;
   top: 5em;
   border-radius: 1em;
 }
-
-/*
-In terms of efficiency and conciseness of code, this is very bloated.
-I could have accomplished the same thing in a much sleeker way,
-but for a first attempt it will suffice.
-*/

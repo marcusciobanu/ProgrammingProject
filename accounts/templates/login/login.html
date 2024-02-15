@@ -1,43 +1,30 @@
-<!doctype html>
-<html lang="en">
+{% extends "accounts/base.html" %}
 {% load static %}
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Login to account</title>
-        <link rel="stylesheet" href="{% static 'login/styles/login.css' %}">
-        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-        <link rel="stylesheet" href="{% static 'styles/header.css' %}">
-    </head>
-    <body>
-        <header class="menubar">
-        <h2 class="logo">europa fitness</h2>
-        <nav class="navigation">
-            <a href="../"><button class="home">Home</button></a>
-        </nav>
-    </header>
-        <div class="wrapper">
-            <form method="post" action="{% url 'loginpage' %}">
-                {% csrf_token %}
-                <h1>Login</h1>
-                <div class="inputbox">
-                    <input type="text" name="{{ form.username.name }}" placeholder="Username" required>
-                    <i class='bx bxs-user'></i>
-                </div>
-                <div class="inputbox">
-                    <input type="password" name="{{ form.password.name }}" placeholder="Password" required>
-                    <i class='bx bxs-key'></i>
-                </div>
-                <div class="rememberForgot">
-                    <label><input type="checkbox"> Remember me?</label>
-                    <a href="#">Forgot Password?</a>
-                </div>
-                <button type="submit" class="button">Login</button>
-                <div class="registerLink">
-                    <p>Don't have an account? <a href="../register">Register</a></p>
-                </div>
-            </form>
+{% block title %}Login to account{% endblock %}
+{% block style %}{% static 'login/styles/login.css' %}{% endblock %}
+{% block content %}
+<body>
+<div class="wrapper">
+    <form method="post" action="{% url 'loginpage' %}">
+        {% csrf_token %}
+        <h1>Login</h1>
+        <div class="inputbox">
+            <input type="text" name="{{ form.username.name }}" placeholder="Username" required>
+            <i class='bx bxs-user'></i>
         </div>
-    </body>
-</html>
+        <div class="inputbox">
+            <input type="password" name="{{ form.password.name }}" placeholder="Password" required>
+            <i class='bx bxs-key'></i>
+        </div>
+        <div class="rememberForgot">
+            <label><input type="checkbox"> Remember me?</label>
+            <a href="#">Forgot Password?</a>
+        </div>
+        <button type="submit" class="button">Login</button>
+        <div class="registerLink">
+            <p>Don't have an account? <a href="../register">Register</a></p>
+        </div>
+    </form>
+</div>
+</body>
+{% endblock %}

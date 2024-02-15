@@ -1,63 +1,47 @@
-<!doctype html>
-<html lang="en">
+{% extends 'accounts/base.html' %}
 {% load static %}
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Register for an account</title>
-    <link rel="stylesheet" href="{% static 'register/styles/register.css' %}">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="{% static 'styles/header.css' %}">
-
-</head>
-<body>
-    <header class="menubar">
-        <h2 class="logo">europa fitness</h2>
-        <nav class="navigation">
-            <a href="../"><button class="home">Home</button></a>
-        </nav>
-    </header>
-    <div class="wrapper">
-        <form method="post" action="{% url 'registerpage' %}">
-            {% csrf_token %}
-            <h1>Registration</h1>
-            <div class="inputbox">
-                <div class="inputfield">
-                    <input type="text" name="{{ form.username.name }}" placeholder="Username" required>
-                    <i class='bx bxs-user'></i>
-                </div>
-                <div class="inputfield">
-                    <input type="text" name="{{ form.first_name.name }}" placeholder="Forename" required>
-                    <i class='bx bxs-user'></i>
-                </div>
+{% block title %}Register for an account{% endblock %}
+{% block style %}{% static 'register/styles/register.css' %}{% endblock %}
+{% block content %}
+<div class="wrapper">
+    <form method="post" action="{% url 'registerpage' %}">
+        {% csrf_token %}
+        <h1>Registration</h1>
+        <div class="inputbox">
+            <div class="inputfield">
+                <input type="text" name="{{ form.username.name }}" placeholder="Username" required>
+                <i class='bx bxs-user'></i>
             </div>
-            <div class="inputbox">
-                <div class="inputfield">
-                    <input type="email" name="{{ form.email.name }}" placeholder="Email" required>
-                    <i class='bx bxs-envelope'></i>
-                </div>
-                <div class="inputfield">
-                    <input type="text" name="{{ form.last_name.name }}" placeholder="Surname" required>
-                    <i class='bx bxs-user'></i>
-                </div>
+            <div class="inputfield">
+                <input type="text" name="{{ form.first_name.name }}" placeholder="Forename" required>
+                <i class='bx bxs-user'></i>
             </div>
-            <div class="inputbox">
-                <div class="inputfield">
-                    <input type="password" name="{{ form.password1.name }}" placeholder="Password" required>
-                    <i class='bx bxs-key'></i>
-                </div>
-                <div class="inputfield">
-                    <input type="password" name="{{ form.password2.name }}" placeholder="Confirm Password" required>
-                    {% if form.password2.errors %}
+        </div>
+        <div class="inputbox">
+            <div class="inputfield">
+                <input type="email" name="{{ form.email.name }}" placeholder="Email" required>
+                <i class='bx bxs-envelope'></i>
+            </div>
+            <div class="inputfield">
+                <input type="text" name="{{ form.last_name.name }}" placeholder="Surname" required>
+                <i class='bx bxs-user'></i>
+            </div>
+        </div>
+        <div class="inputbox">
+            <div class="inputfield">
+                <input type="password" name="{{ form.password1.name }}" placeholder="Password" required>
+                <i class='bx bxs-key'></i>
+            </div>
+            <div class="inputfield">
+                <input type="password" name="{{ form.password2.name }}" placeholder="Confirm Password" required>
+                {% if form.password2.errors %}
                     <div class="error-message">{{ form.password2.errors.as_text }}</div>
-                    {% endif %}
-                    <i class='bx bxs-key'></i>
-                </div>
+                {% endif %}
+                <i class='bx bxs-key'></i>
             </div>
-            <label>Already have an account? <a href="../login">Login</a></label>
-            <button type="submit" class="button">Register</button>
-        </form>
-    </div>
-</body>
-</html>
+        </div>
+        <label>Already have an account? <a href="../login">Login</a></label>
+        <button type="submit" class="button">Register</button>
+    </form>
+</div>
+{% endblock %}

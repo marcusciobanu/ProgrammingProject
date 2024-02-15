@@ -1,5 +1,3 @@
-/* Animations and attributes for the top navigation bar */
-
 .menubar {
     background-color: rgba(0, 0, 0, 0.3);
     position: fixed;
@@ -27,7 +25,7 @@
     color: white;
     transition-duration: 1s;
 }
-.navigation .home {
+.navigation .btn {
     font-size: 1.2em;
     width: 5.5em;
     height: 2.5em;
@@ -37,14 +35,15 @@
     border-radius: 0.4em;
     cursor: pointer;
     margin-left: 2.5em;
+    color: white;
 }
-.navigation .home:hover{
+.navigation .btn:hover{
     background-color: white;
     border-color: white;
     color: black;
     transition: 0.5s;
 }
-.navigation .home:not(:hover){
+.navigation .btn:not(:hover){
     background-color: transparent;
     color: white;
     transition-duration: 0.5s;
