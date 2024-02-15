@@ -5,53 +5,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{% block title %}home{% endblock %}</title>
-    <link rel="stylesheet" href="{% static 'dashboard/styles/dashboard.css' %}">
+    <title>{% block title %}~ control centre{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'styles/sidebar.css' %}">
     <link rel="stylesheet" href="{% block style %}{% endblock %}">
     <link href='{% block icon %}https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css{% endblock %}' rel='stylesheet'>
 </head>
 <body>
-    <div class="sidebar">
+    <div class="sidebar active">
         <div class="logo-content">
             <div class="logo">
                 <i class='bx bxs-planet'></i>
                 <h3>europa</h3>
             </div>
-            <i class='bx bx-menu' id="button" ></i>
+            <i class='bx bx-menu' id="button"></i>
         </div>
         <ul class="list">
-            <li class="list-item">
+            <li class="list-item active">
                 <a href="#">
-                    <i class='bx bx-grid-alt' ></i>
-                    <span class="links-name">Dashboard</span>
+                    <i class='bx bx-dumbbell'></i>
+                    <span class="links-name">Workout</span>
+                    <span class="tooltip">Workout</span>
                 </a>
             </li>
             <li class="list-item">
                 <a href="#">
-                    <i class='bx bx-grid-alt' ></i>
-                    <span class="links-name">Dashboard</span>
+                    <i class='bx bx-calendar'></i>
+                    <span class="links-name">History</span>
+                    <span class="tooltip">History</span>
                 </a>
             </li>
             <li class="list-item">
                 <a href="#">
-                    <i class='bx bx-grid-alt' ></i>
-                    <span class="links-name">Dashboard</span>
+                    <i class='bx bx-copy'></i>
+                    <span class="links-name">Templates</span>
+                    <span class="tooltip">Templates</span>
                 </a>
             </li>
             <li class="list-item">
                 <a href="#">
-                    <i class='bx bx-grid-alt' ></i>
-                    <span class="links-name">Dashboard</span>
+                    <i class='bx bx-archive'></i>
+                    <span class="links-name">Exercise Bank</span>
+                    <span class="tooltip">Exercise Bank</span>
                 </a>
             </li>
             <li class="list-item">
                 <a href="#">
-                    <i class='bx bx-grid-alt' ></i>
-                    <span class="links-name">Dashboard</span>
+                    <i class='bx bx-cog'></i>
+                    <span class="links-name">Settings</span>
+                    <span class="tooltip">Settings</span>
+                </a>
+            </li>
+        </ul>
+        <ul class="list-logout">
+            <li class="list-logout">
+                <a href="#">
+                    <i class='bx bx-log-out'></i>
+                    <span class="links-name">Logout</span>
                 </a>
             </li>
         </ul>
     </div>
+    {% block content %}
+    {% endblock %}
+    <script src="{% static 'js/sidebar.js' %}"></script>
     <script src="{% block script %}{% endblock %}"></script>
 </body>
 </html>
