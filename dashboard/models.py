@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 
 class Workout(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
+    time_started = models.DateTimeField(auto_now_add=True)
     time_taken = models.IntegerField(help_text="Duration of the workout in minutes")
 
 
