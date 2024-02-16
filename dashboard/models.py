@@ -1,34 +1,28 @@
 from django.db import models
-from django.conf import settings
-
-
-class Exercise(models.Model):
-    name = models.CharField(max_length=100)
-
-    def __str__(self):
-        return self.name
+from django.contrib.auth.models import User
 
 
 class Workout(models.Model):
-    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-    time_taken = models.IntegerField()
-    exercises = models.ManyToManyField(Exercise, related_name='workouts')
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    time_taken = models.IntegerField(help_text="Duration of the workout in minutes")
 
-    def __str__(self):
-        return f"Workout by {self.user.username}"
+
+class ExerciseBank(models.Model):
+    name = models.CharField(max_length=100, help_text="Name of the exercise")
+
+
+class WorkoutExercise(models.Model):
+    workout = models.ForeignKey(Workout, on_delete=models.CASCADE)
+    exercise = models.ForeignKey(ExerciseBank, on_delete=models.CASCADE)
 
 
 class Set(models.Model):
-    workout = models.ForeignKey('Workout', on_delete=models.CASCADE)
-    exercise = models.ForeignKey('Exercise', on_delete=models.CASCADE)
-    reps = models.IntegerField()
-    weight = models.DecimalField(max_digits=6, decimal_places=2)
+    workout_exercise = models.ForeignKey(WorkoutExercise, on_delete=models.CASCADE)
+    weight = models.FloatField(help_text="Weight used for the set")
     SET_TYPES = [
-        ('failure', 'Failure'),
-        ('dropset', 'Dropset'),
         ('warmup', 'Warmup'),
+        ('dropset', 'Dropset'),
+        ('failure', 'Failure'),
     ]
-    set_type = models.CharField(max_length=7, choices=SET_TYPES)
-
-    def __str__(self):
-        return f"{self.exercise.name} - {self.set_type} set"
+    set_type = models.CharField(max_length=7, choices=SET_TYPES, help_text="Type of the set")
+    reps = models.IntegerField(help_text="Number of repetitions")
