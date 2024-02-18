@@ -8,13 +8,13 @@ class Workout(models.Model):
     time_taken = models.IntegerField(help_text="Duration of the workout in minutes")
 
 
-class ExerciseBank(models.Model):
+class Exercise(models.Model):
     name = models.CharField(max_length=100, help_text="Name of the exercise")
 
 
 class WorkoutExercise(models.Model):
     workout = models.ForeignKey(Workout, on_delete=models.CASCADE)
-    exercise = models.ForeignKey(ExerciseBank, on_delete=models.CASCADE)
+    exercise = models.ForeignKey(Exercise, on_delete=models.CASCADE)
 
 
 class Set(models.Model):
