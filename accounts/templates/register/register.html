@@ -9,31 +9,31 @@
         <h1>Registration</h1>
         <div class="inputbox">
             <div class="inputfield">
-                <input type="text" name="{{ form.username.name }}" placeholder="Username" required>
+                <input type="text" name="username" placeholder="Username" {% if form.username.value %} value="{{ form.username.value }}" {% endif %} required>
                 <i class='bx bxs-user'></i>
             </div>
             <div class="inputfield">
-                <input type="text" name="{{ form.first_name.name }}" placeholder="Forename" required>
+                <input type="text" name="first_name" placeholder="Forename" {% if form.first_name.value %} value="{{ form.first_name.value }}" {% endif %} required>
                 <i class='bx bxs-user'></i>
             </div>
         </div>
         <div class="inputbox">
             <div class="inputfield">
-                <input type="email" name="{{ form.email.name }}" placeholder="Email" required>
+                <input type="email" name="email" placeholder="Email" {% if form.email.value %} value="{{ form.email.value }}" {% endif %} required>
                 <i class='bx bxs-envelope'></i>
             </div>
             <div class="inputfield">
-                <input type="text" name="{{ form.last_name.name }}" placeholder="Surname" required>
+                <input type="text" name="last_name" placeholder="Surname" {% if form.last_name.value %} value="{{ form.last_name.value }}" {% endif %} required>
                 <i class='bx bxs-user'></i>
             </div>
         </div>
         <div class="inputbox">
             <div class="inputfield">
-                <input type="password" name="password1" placeholder="Password" required>
+                <input type="password" name="password1" placeholder="Password" {% if form.password1.value %} value="{{ form.password1.value }}" {% endif %} required>
                 <i class='bx bxs-key'></i>
             </div>
             <div class="inputfield">
-                <input type="password" name="password2" placeholder="Confirm Password" required>
+                <input type="password" name="password2" placeholder="Confirm Password" {% if form.password2.value %} value="{{ form.password2.value }}" {% endif %} required>
                 
                 <i class='bx bxs-key'></i>
             </div>
