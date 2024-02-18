@@ -112,7 +112,8 @@ body{
     }
 }
 
-.error-message {
+.error-message *{
     color: #FF474D;
-    margin-top: 20px;
+    margin: 10px 0;
+    list-style: none;
 }
