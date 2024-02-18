@@ -9,13 +9,22 @@
         {% csrf_token %}
         <h1>Login</h1>
         <div class="inputbox">
-            <input type="text" name="{{ form.username.name }}" placeholder="Username" required>
+            <input type="text" name="username" placeholder="Username" {% if form.username.value %} value="{{ form.username.value }}" {% endif %} required>
             <i class='bx bxs-user'></i>
         </div>
         <div class="inputbox">
-            <input type="password" name="{{ form.password.name }}" placeholder="Password" required>
+            <input type="password" name="password" placeholder="Password" {% if form.password.value %} value="{{ form.password.value }}" {% endif %} required>
             <i class='bx bxs-key'></i>
         </div>
+        {% if form.errors %}
+        <div class="error-message">
+            {% for field, errors in form.errors.items %}
+                {% for error in errors %}
+                <li>{{ error }}</li>
+                {% endfor %}
+            {% endfor %}
+        </div>
+        {% endif %}
         <div class="rememberForgot">
             <label><input type="checkbox"> Remember me?</label>
             <a href="#">Forgot Password?</a>
