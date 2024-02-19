@@ -13,7 +13,7 @@ class WorkoutAdmin(admin.ModelAdmin):
 
 
 class ExerciseAdmin(admin.ModelAdmin):
-    list_display = ('id', 'name')
+    list_display = ('id', 'name', 'user')
     search_fields = ['name']
 
 

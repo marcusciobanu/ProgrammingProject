@@ -22,36 +22,36 @@
             <i class='bx bx-menu' id="button"></i>
         </div>
         <ul class="list">
-            <li class="list-item active">
-                <a href="../home">
+            <li class="list-item {% if request.path == '/dashboard/home/' %}active{% endif %}">
+                <a href="/dashboard/home">
                     <i class="bx bx-home"></i>
                     <span class="links-name">Home</span>
                     <span class="tooltip">Home</span>
                 </a>
             </li>
-            <li class="list-item">
+            <li class="list-item {% if request.path == '/dashboard/workout/' %}active{% endif %}">
                 <a href="#">
                     <i class='bx bx-dumbbell'></i>
                     <span class="links-name">Workout</span>
                     <span class="tooltip">Workout</span>
                 </a>
             </li>
-            <li class="list-item">
+            <li class="list-item {% if request.path == '/dashboard/history/' %}active{% endif %}">
                 <a href="#">
                     <i class='bx bx-calendar'></i>
                     <span class="links-name">History</span>
                     <span class="tooltip">History</span>
                 </a>
             </li>
-            <li class="list-item">
+            <li class="list-item {% if request.path == '/dashboard/templates/' %}active{% endif %}">
                 <a href="#">
                     <i class='bx bx-copy'></i>
                     <span class="links-name">Templates</span>
                     <span class="tooltip">Templates</span>
                 </a>
             </li>
-            <li class="list-item">
-                <a href="#">
+            <li class="list-item {% if request.path == '/dashboard/create/' %}active{% endif %}">
+                <a href="/dashboard/create/">
                     <i class='bx bx-archive'></i>
                     <span class="links-name">Exercise Bank</span>
                     <span class="tooltip">Exercise Bank</span>
@@ -76,7 +76,6 @@
     </div>
     {% block content %}
     {% endblock %}
-    <script src="{% static 'js/sidebar.js' %}"></script>
     <script src="{% block script %}{% endblock %}"></script>
 </body>
 </html>

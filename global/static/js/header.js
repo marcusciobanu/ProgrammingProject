@@ -1,10 +1,10 @@
 const login = document.querySelector("[name='login']");
-const register = document.querySelector("[name='register']");
+const staff = document.querySelector("[name='staff']");
 
 login.addEventListener('click', () => {
     window.location.href = '/login';
 });
 
-register.addEventListener('click', () => {
-    window.location.href = '/register';
+staff.addEventListener('click', () => {
+    window.location.href = '/admin';
 });

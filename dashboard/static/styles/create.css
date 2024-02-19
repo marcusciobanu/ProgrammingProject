@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+h1{
+    margin-bottom: 20px;
+    color: white;
+}
+
+.content-wrapper{
+    margin-left: 290px;
+    margin-top: 50px;
+}
+
+p{
+    color: white;
+    margin-bottom: 10px;
+}

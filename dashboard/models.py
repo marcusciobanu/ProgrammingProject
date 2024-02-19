@@ -9,7 +9,8 @@ class Workout(models.Model):
 
 
 class Exercise(models.Model):
-    name = models.CharField(max_length=100, help_text="Name of the exercise")
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    name = models.CharField(max_length=100)
 
 
 class WorkoutExercise(models.Model):
