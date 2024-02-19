@@ -12,13 +12,12 @@
 </head>
 <body>
     <header class="menubar">
-            <h2 class="logo">europa fitness</h2>
-            <nav class="navigation">
-                <button class="btn" name="login">Login</button>
-                <button class="btn" name="register">Register</button>
-                <button class="btn" name="home">Home</button>
-            </nav>
-        </header>
+        <a class="home" href="/"><h2 class="logo">europa fitness</h2></a>
+        <nav class="navigation">
+            <button class="btn" name="login">Login</button>
+            <button class="btn" name="register">Register</button>
+        </nav>
+    </header>
     {% block content %}
     {% endblock %}
     <script src="{% static 'js/header.js' %}"></script>

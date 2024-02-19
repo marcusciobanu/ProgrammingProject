@@ -16,12 +16,10 @@
     user-select: none;
 }
 .logo:hover{
-    cursor: default;
     color: #afeeee;
     transition-duration: 1s;
 }
 .logo:not(:hover){
-    cursor: default;
     color: white;
     transition-duration: 1s;
 }
@@ -47,4 +45,8 @@
     background-color: transparent;
     color: white;
     transition-duration: 0.5s;
+}
+
+.home{
+    text-decoration: none;
 }
