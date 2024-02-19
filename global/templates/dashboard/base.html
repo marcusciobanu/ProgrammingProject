@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{% block title %}~ control centre{% endblock %}</title>
-    <link rel="stylesheet" href="{% static 'styles/sidebar.css' %}">
     <link rel="stylesheet" href="{% block style %}{% endblock %}">
+    <link rel="stylesheet" href="{% static 'styles/sidebar.css' %}">
     <link href='{% block icon %}https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css{% endblock %}' rel='stylesheet'>
 </head>
 <body>
@@ -23,7 +23,7 @@
         </div>
         <ul class="list">
             <li class="list-item active">
-                <a href="#">
+                <a href="../home">
                     <i class="bx bx-home"></i>
                     <span class="links-name">Home</span>
                     <span class="tooltip">Home</span>
@@ -67,7 +67,7 @@
         </ul>
         <ul class="list-logout">
             <li class="list-logout">
-                <a href="#">
+                <a href="{% url 'logout' %}">
                     <i class='bx bx-log-out'></i>
                     <span class="links-name">Logout</span>
                 </a>

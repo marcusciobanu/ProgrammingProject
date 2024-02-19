@@ -17,7 +17,7 @@ def loginpage(request):
             user = authenticate(username=username, password=password)
             if user is not None:
                 login(request, user)
-                return redirect('../dashboard/')
+                return redirect('../dashboard/home')
     else:
         form = AuthenticationForm()
     return render(request, 'login/login.html', {'form': form})
@@ -29,7 +29,7 @@ def registerpage(request):
         if form.is_valid():
             user = form.save()
             login(request, user)
-            return redirect('../dashboard/')
+            return redirect('../dashboard/home')
     else:
         form = CustomUserCreationForm()
     return render(request, 'register/register.html', {'form': form})
