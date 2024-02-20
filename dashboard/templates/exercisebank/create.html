@@ -3,12 +3,10 @@
 {% block title %}~ create exercise{% endblock %}
 {% block style %}{% static 'styles/create.css' %}{% endblock %}
 {% block content %}
-    <div class="content-wrapper">
         <h1>Add a New Exercise</h1>
         <form method="post" action="{% url 'create' %}">
             {% csrf_token %}
             {{ form.as_p }}
             <button type="submit">Add Exercise</button>
         </form>
-    </div>
 {% endblock %}

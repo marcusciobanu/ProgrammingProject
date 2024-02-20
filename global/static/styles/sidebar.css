@@ -161,3 +161,14 @@ body{
 .logo-content a{
     text-decoration: none;
 }
+
+.content-wrapper.active{
+    margin-left: 290px;
+    margin-top: 50px;
+}
+
+.content-wrapper{
+    margin-left: 130px;
+    margin-top: 50px;
+    transition: .5s ease;
+}

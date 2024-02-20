@@ -74,8 +74,11 @@
             </li>
         </ul>
     </div>
+    <div class="content-wrapper active">
     {% block content %}
     {% endblock %}
+    </div>
+    <script src="{% static 'js/sidebar.js' %}"></script>
     <script src="{% block script %}{% endblock %}"></script>
 </body>
 </html>

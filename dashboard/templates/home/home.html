@@ -3,10 +3,9 @@
 {% block title %}~ home{% endblock %}
 {% block style %}{% static 'styles/home.css' %}{% endblock %}
 {% block content %}
-    <div class="content-wrapper">
-        <h1 class="name">Welcome back,
-            {% if name %}{{ name }}!
-            {% else %}{{ username }}!
-            {% endif %}</h1>
-    </div>
+    <h1 class="name">Welcome back,
+        {% if name %}{{ name }}!
+        {% else %}{{ username }}!
+        {% endif %}
+    </h1>
 {% endblock %}
