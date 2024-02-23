@@ -331,4 +331,70 @@ These are the core features that will make the web app work, but there are many 
 In terms of hardware requirements, the device the user is currently on must be able to run a web browser and connect to the internet. They must also have around 1GB of local storage available to leave plenty room for database downloads and caching websites locally.
 
 \section{Design}
+
+\subsection{Problem Decomposition}
+
+As is to be expected with a program of this complexity, there are many moving parts, which would be best tackled by breaking them down into their constituent parts. 
+
+\subsubsection{Features that need to be included}
+
+Following on from the analysis, we need to decide which features will be implemented as a base to provide the essential functionality of the program. Essentially, we are abstracting away any of the extra things which do not form the core of the program. 
+
+\paragraph{Landing Page}
+
+This should be as minimal and barebones as possible. The only purpose it serves is letting the user know that they are at the website when they enter the root URL into their browser (now decided to be named europaFitness), and to give them a starting point to enter the actual functionality of the website. 
+
+\paragraph{Registration System} 
+
+This should allow the user to create an account. This will include a username (unique, as it is part of the composite key), email, forename, surname and password. There are a few key requirements for this. Each of the inputs must be validated to ensure they are in the correct format and are unique when needed. Additionally, the password must be hashed before being sent to the database to ensure security. 
+
+\paragraph{Login System}
+
+This naturally follows from the registration system. The login will be made up of the username and password, as that is all that is necessary to uniquely identify a user and make sure it is them who is logging in. 
+
+\paragraph{Dashboard}
+
+This is where the user will be immediately taken to after logging in or registering an account. It will be made up of a sidebar, with the various applications listed on it. At the top of the sidebar will be a website logo, which the user can press to return to the landing  page without ending their session. At the bottom of the sidebar will be a traditional logout button. This sidebar will be on the left of the screen, taking up about 15-20\% of the screen width. This sidebar can also be collapsed even further if the user wishes to focus on the application. 
+
+The rest of the screen will be dedicated to the specific application the user is on.
+
+\paragraph{Home}
+
+The default app selected when entering the dashboard. Simply welcomes the user to the app.
+
+\paragraph{Workout}
+
+This is the core of the web app. It allows a user to quick start a workout on the fly and add in whatever exercises they want from the exercise bank. Then they can add sets to each exercise, specifying weight, number of reps and type of set. The workout will also record how long it took and the date. Once the user is finished, they can submit the entire workout and save it to the database.
+
+\paragraph{History}
+
+Simply allows the user to view a history of workouts done, retrieved from the database, displaying all of the information associated with that workout. It will also allow the user to delete the workout.
+
+\paragraph{Templates}
+
+Allows the user to create templates of workouts consisting of the exercises they want to do. Saves the user time if they follow a regime which involves repeated workouts. On the workout app, the user will then be able to choose whether they want to quick-start a workout or select from their created templates. 
+
+\paragraph{Create Exercise}
+
+Allows the user to create their own exercises and add them to the database and also view all of their added exercises and delete them if they want. 
+
+\paragraph{Error pages}
+
+A set of pages which restrict user access through URL inspection. For example, if a user tries to access the dashboard when they are not logged in, an error screen will be returned informing the user of the error and redirecting them to the login page. 
+
+\subsubsection{High Level Overview of System Design}
+
+Now that the features that are needed to be implemented are clearly defined, we need to decide how these features are going to be implemented in a broad overview. 
+
+\paragraph{Technologies}
+
+The proposed solution will be a website. Therefore, we need to consider the technologies used for both the client side and server side. I have decided on using HTML, CSS and JS to build the front-end (standard in web-development), and Python for the back-end.
+
+\paragraph{Frameworks}
+
+Various frameworks could be used to help abstract some of the technicalities of many common processes in web-development, both in the front-end and back-end. For the front-end, I will keep it simple and use vanilla HTMl, CSS and JavaScript as this is more than sufficient for my needs and gives me extensive control over the design and styling of the website. 
+
+For the back-end, it is essential to use a framework to abstract the tedious tasks of routing HTTP requests and the like. For this I will use Django. Django is a batteries-included, opinionated framework enabling the creation of websites using Python. Since it is batteries-included, it comes with all the packages and dependencies you would like ever need, all with extensive and detailed documentation. This will make development hassle-free. 
+
+
 \end{document}
