@@ -29,6 +29,13 @@
 \contentsline {paragraph}{\numberline {3.1.1.8}Templates}{19}{}%
 \contentsline {paragraph}{\numberline {3.1.1.9}Create Exercise}{19}{}%
 \contentsline {paragraph}{\numberline {3.1.1.10}Error pages}{19}{}%
-\contentsline {subsubsection}{\numberline {3.1.2}High Level Overview of System Design}{19}{}%
-\contentsline {paragraph}{\numberline {3.1.2.1}Technologies}{20}{}%
-\contentsline {paragraph}{\numberline {3.1.2.2}Frameworks}{20}{}%
+\contentsline {subsection}{\numberline {3.2}System Design (Problem Modelling)}{20}{}%
+\contentsline {subsubsection}{\numberline {3.2.1}High Level Overview of System Design}{20}{}%
+\contentsline {paragraph}{\numberline {3.2.1.1}Technologies}{20}{}%
+\contentsline {paragraph}{\numberline {3.2.1.2}Frameworks}{20}{}%
+\contentsline {subsubsection}{\numberline {3.2.2}System Architecture}{20}{}%
+\contentsline {subsection}{\numberline {3.3}Permanent Data Storage}{22}{}%
+\contentsline {subsection}{\numberline {3.4}Algorithms}{23}{}%
+\contentsline {subsubsection}{\numberline {3.4.1}Accounts}{23}{}%
+\contentsline {subsubsection}{\numberline {3.4.2}Dashboard}{24}{}%
+\contentsline {subsection}{\numberline {3.5}Identification of Key Variables, Data Structures and Classes}{24}{}%

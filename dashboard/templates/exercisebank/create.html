@@ -6,7 +6,21 @@
         <h1>Add a New Exercise</h1>
         <form method="post" action="{% url 'create' %}">
             {% csrf_token %}
-            {{ form.as_p }}
+            {{ form.as_div }}
             <button type="submit">Add Exercise</button>
         </form>
+        <h1>Exercise Bank</h1>
+        {% if user_exercises %}
+        <ul>
+            {% for exercise in user_exercises %}
+                <li>{{ exercise.name }}</li>
+                <form action="{% url 'delete_exercise' exercise.id %}" method="post">
+                    {% csrf_token %}
+                    <input type="submit" value="Delete">
+                </form>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <p>No exercises found.</p>
+{% endif %}
 {% endblock %}

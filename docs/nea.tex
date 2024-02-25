@@ -37,7 +37,7 @@
     showspaces=false,                
     showstringspaces=false,
     showtabs=false,                  
-    tabsize=2
+    tabsize=4
 }
 
 % Language-specific settings
@@ -68,6 +68,26 @@
     morekeywords={const, let, function}, % Add JavaScript keywords here
 }
 
+\lstdefinestyle{OCRPseudocode}{
+    language=Python, 
+    morekeywords={FUNCTION, ENDFUNCTION, IF, THEN, ELSE, ENDIF, RETURN, WITH}, 
+    keywordstyle=\color{magenta}, 
+    identifierstyle=\color{black}, 
+    sensitive=false, 
+    commentstyle=\color{codegreen}\ttfamily, 
+    stringstyle=\color{codepurple}, 
+    basicstyle=\footnotesize\ttfamily, 
+    breaklines=true, 
+    numbers=left, 
+    numberstyle=\tiny\color{codegray}, 
+    showstringspaces=false, 
+    frame=single, 
+    backgroundcolor=\color{backcolour}, 
+    rulecolor=\color{black}, 
+    tabsize=4, 
+    captionpos=b
+}
+
 \title{Exercise Tracker Website \\ \vspace{10pt} \large Computer Science A-Level Project \normalsize}
 \author{Marcus Ciobanu}
 \date{}
@@ -84,6 +104,7 @@
 Listed in order of their appearance:
 \begin{itemize}
   \item Statista (2022). UK fitness/health club market size 2021 | Statista. [online] Statista. Available at: \url{https://www.statista.com/statistics/1194831/fitness-health-club-market-size-uk/}.
+  \item MDN Web Docs. (n.d.). Django introduction. [online] Available at: \url{https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Introduction.}
 \end{itemize}
 \newpage
 
@@ -342,7 +363,7 @@ Following on from the analysis, we need to decide which features will be impleme
 
 \paragraph{Landing Page}
 
-This should be as minimal and barebones as possible. The only purpose it serves is letting the user know that they are at the website when they enter the root URL into their browser (now decided to be named europaFitness), and to give them a starting point to enter the actual functionality of the website. 
+This should be as minimal and bare-bones as possible. The only purpose it serves is letting the user know that they are at the website when they enter the root URL into their browser (now decided to be named europaFitness), and to give them a starting point to enter the actual functionality of the website. 
 
 \paragraph{Registration System} 
 
@@ -382,6 +403,8 @@ Allows the user to create their own exercises and add them to the database and a
 
 A set of pages which restrict user access through URL inspection. For example, if a user tries to access the dashboard when they are not logged in, an error screen will be returned informing the user of the error and redirecting them to the login page. 
 
+\subsection{System Design (Problem Modelling)}
+
 \subsubsection{High Level Overview of System Design}
 
 Now that the features that are needed to be implemented are clearly defined, we need to decide how these features are going to be implemented in a broad overview. 
@@ -392,9 +415,124 @@ The proposed solution will be a website. Therefore, we need to consider the tech
 
 \paragraph{Frameworks}
 
-Various frameworks could be used to help abstract some of the technicalities of many common processes in web-development, both in the front-end and back-end. For the front-end, I will keep it simple and use vanilla HTMl, CSS and JavaScript as this is more than sufficient for my needs and gives me extensive control over the design and styling of the website. 
+Various frameworks could be used to help abstract some of the technicalities of many common processes in web-development, both in the front-end and back-end. For the front-end, I will keep it simple and use vanilla HTML, CSS and JavaScript as this is more than sufficient for my needs and gives me extensive control over the design and styling of the website. 
 
-For the back-end, it is essential to use a framework to abstract the tedious tasks of routing HTTP requests and the like. For this I will use Django. Django is a batteries-included, opinionated framework enabling the creation of websites using Python. Since it is batteries-included, it comes with all the packages and dependencies you would like ever need, all with extensive and detailed documentation. This will make development hassle-free. 
+For the back-end, it is essential to use a framework to abstract the tedious tasks of routing HTTP requests and the like. For this I will use Django. Django is a batteries-included, opinionated framework enabling the creation of websites using Python. Since it is batteries-included, it comes with all the packages and dependencies you would likely ever need, all with extensive and detailed documentation. This will make development hassle-free. 
 
+\subsubsection{System Architecture}
 
+Handling the client-server dynamic will be a key consideration when developing the solution. There must be a clear structure to separate the various functionalities of the code. I will be using the MVT (Model, View, Template) architecture to structure my code. See figure 11 for an abstraction of how the MVT architecture functions.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=1\textwidth]{Figure 11.png}
+  \caption{MVT architecture}
+\end{figure}
+
+By nature, the MVT architecture (and by extension, Django itself as a framework) is modular and delegates all tasks to separate modules. As a HTTP request is received by the server, it uses the URL to decide which 'view' function to delegate the task of handling it to. It does this through a 'urls' file, which acts as a traffic warden, directing the flow of the program. The 'urls.py' file in a Django project would map the values of the URL to an appropriate view function. It can also read up to a certain point of a URL and then cut off the part it has already read, handing the rest to a URL file in a certain app that it would be related to, enhancing modularity and maintainability. 
+
+Once it decides which view function to hand it to, the HTTP request is sent to the view. Views control the business logic of a given app. It dictates what you will see when the HTTP response is received, but not necessarily how you will see it. That is, it has no influence over the styling or aesthetics of the rendered page, but does have control over the contents. The view will read the HTTP request and decide what to do next. It may need to gather data from the models. 
+
+Models are an abstraction over traditional databases. In Django, OOP is used to define a model, where each model corresponds to a table in a relational database. The attributes represent fields and the methods define things like initialization of an object, deletion, foreign key relationships and more. This layer of abstraction also provides an extra layer of security, as at no point in the program can a user's inputs ever be mapped directly into an SQL statement. This prevents SQL injection. 
+
+Back to the view function, once the data has been gathered from the models and all associated logic has been calculated, it then delegates the formatting of the HTTP response to the templates. Templates are an extension of traditional HTML. It would be grossly inefficient to manually format each possible HTML file that could be created from a user's inputs. So, we use templates to introduce placeholders (variables) directly into the HTML markup which will then be read and compiled by the template interpreter built into the framework to render the final HTML to be sent in the HTTP response. A important thing to note, the template does not have to be HTML, but for our purposes, it will nearly always be HTML. 
+
+\subsection{Permanent Data Storage}
+
+Underneath the model abstraction, there will still need to be a traditional database for permanent data storage. For this project, I will be using SQLite. It is a lightweight, minimalist SQL database that is suitable for projects of small size. It works best for sites will low concurrent usage which is appropriate for the use case. 
+
+There are a couple of tables that need to be designed. In terms of users, there is a built in module: 'django.contrib.auth' which provides functionality for user creation out of the box. Since there is no use in re-inventing the wheel, I will use this module as it provides hashing of passwords and handling of user registration and logging in forms. As for the workout app, I will design my own relational database. See the ERD in figure 12 for specification of the various fields and relationships of the proposed database. 
+
+\begin{figure}
+  \centering
+  \includegraphics[width=1\textwidth]{Figure 12.png}
+  \caption{ERD of database}
+\end{figure}
+
+It follows a top down architecture where the workout acts as the parent of the workout\_exercise, which in turn acts as the parent of the set. This is defined through the foreign key relationships. A workout belongs to a user. A workout\_exercise belongs to a workout (the exercise being taken from the exercise\_bank which defines all the created exercises by the user). A set belongs to a workout\_exercise. Many to many relationships have been removed, and the database is normalized. 
+
+\newpage
+
+\subsection{Algorithms}
+
+The proposed solution, when broken down, broadly separates into two main categories: Accounts and Dashboard. These represent Django apps that separate the functionality of the website into two main modules. Accounts handles the face of the website. That is, the landing page and the account creation process/login process. Dashboard is a broad term used to represent all of the different apps identified in the Problem Decomposition: Workout, Exercise Bank, History etc. Below are pseudocode functions for the most important parts of the program. 
+
+\subsubsection{Accounts}
+
+\begin{lstlisting}[style=OCRPseudocode, caption={Login Page}]
+  FUNCTION loginpage(request):
+  IF the request is a POST:
+      Make a form with the POST data.
+      IF the form is okay:
+          Get username and password from form.
+          Try to log the user in with username and password.
+          IF the user is found:
+              Log the user in.
+              Go to the dashboard home page.
+      ENDIF
+  ELSE:
+      Just show the empty login form.
+  ENDIF
+  Show the login page with the form.
+ENDFUNCTION
+\end{lstlisting}
+
+\begin{lstlisting}[style=OCRPseudocode, caption={Register Page}]
+  FUNCTION registerpage(request)
+  IF form submitted THEN
+    Create form with submitted data
+    IF form data is correct THEN
+      Save new user
+      Log in new user
+      Go to dashboard
+    ENDIF
+  ELSE
+    Show empty form
+  ENDIF
+  Show registration page with form
+ENDFUNCTION
+
+\end{lstlisting}
+
+\begin{lstlisting}[style=OCRPseudocode, caption={CustomUserCreationForm}]
+  CLASS CustomUserCreationForm INHERITS UserCreationForm
+  SETUP form to use User model and add fields: first name, last name, email
+ENDCLASS
+\end{lstlisting}
+
+\subsubsection{Dashboard}
+
+\begin{lstlisting}[style=OCRPseudocode, caption={Exercise Creation view}]
+  FUNCTION create(request)
+  IF user logged in THEN
+    Get user exercises
+    IF form submitted THEN
+      Create and check form with user data
+      IF form correct THEN
+        Save exercise
+      Reset form after save or if incorrect
+    ELSE
+      Show new form
+    Show page with form and exercises
+  ELSE
+    Show login error page
+  ENDIF
+ENDFUNCTION
+
+\end{lstlisting}
+
+\begin{lstlisting}[style=OCRPseudocode, caption={Exercise deletion view}]
+  FUNCTION delete_exercise(request, exercise_id)
+  IF user logged in AND form submitted THEN
+    Find exercise by id for the logged-in user
+    Delete exercise
+  Redirect to create page regardless
+ENDFUNCTION
+\end{lstlisting}
+
+\subsection{Identification of Key Variables, Data Structures and Classes}
+
+\subsubsection{Accounts}
+
+Each account is represented by a model class derived from the framework module 'django.contrib.auth'. Each instance of a user class has an ID (integer), username (string), forename, surname and email (all strings). 
 \end{document}
