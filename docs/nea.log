@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.2.21)  25 FEB 2024 20:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.2.21)  26 FEB 2024 11:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -108,40 +108,59 @@ Package: array 2022/09/04 v2.5g Tabular extension package (FMi)
 \TX@delta=\dimen160
 \TX@cols=\count268
 \TX@ftn=\toks21
+) (/usr/local/texlive/2023/texmf-dist/tex/generic/dirtree/dirtree.sty
+Package: dirtree 2012/12/11 v0.32 package wrapper for dirtree
+ (/usr/local/texlive/2023/texmf-dist/tex/generic/dirtree/dirtree.tex `dirtree' v0.32, 2012/12/11 (jcc)
+\DT@offset=\dimen161
+\DT@width=\dimen162
+\DT@sep=\dimen163
+\DT@all=\dimen164
+\DT@rulewidth=\dimen165
+\DT@dotwidth=\dimen166
+\DTbaselineskip=\dimen167
+\DT@counti=\count269
+\DT@countii=\count270
+\DT@countiii=\count271
+\DT@countiv=\count272
+\DT@indent=\dimen168
+\DT@parskip=\dimen169
+\DT@baselineskip=\dimen170
+)
+File: dirtree.tex 2012/12/11 v0.32 `dirtree' (jcc)
 ) (/usr/local/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count269
+\l__color_backend_stack_int=\count273
 \l__pdf_internal_box=\box57
 ) (./nea.aux)
 \openout1 = `nea.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-\c@lstlisting=\count270
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+\c@lstlisting=\count274
  (/usr/local/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count271
-\scratchdimen=\dimen161
+\scratchcounter=\count275
+\scratchdimen=\dimen171
 \scratchbox=\box58
-\nofMPsegments=\count272
-\nofMParguments=\count273
+\nofMPsegments=\count276
+\nofMParguments=\count277
 \everyMPshowfont=\toks22
-\MPscratchCnt=\count274
-\MPscratchDim=\dimen162
-\MPnumerator=\count275
-\makeMPintoPDFobject=\count276
+\MPscratchCnt=\count278
+\MPscratchDim=\dimen172
+\MPnumerator=\count279
+\makeMPintoPDFobject=\count280
 \everyMPtoPDFconversion=\toks23
 ) (/usr/local/texlive/2023/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -150,11 +169,11 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 97.
+(Font)              <12> on input line 98.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 97.
+(Font)              <8> on input line 98.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 97.
+(Font)              <6> on input line 98.
  [1
 
 {/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./nea.toc
@@ -167,7 +186,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \openout3 = `nea.toc'.
 
  [2]
-Overfull \hbox (27.49701pt too wide) in paragraph at lines 107--108
+Overfull \hbox (27.49701pt too wide) in paragraph at lines 108--109
 \OT1/cmtt/m/n/10 https : / / developer . mozilla . org / en-[]US / docs / Learn / Server-[]side / Django /
  []
 
@@ -175,90 +194,106 @@ Overfull \hbox (27.49701pt too wide) in paragraph at lines 107--108
 <Figure 1.png, id=19, 720.6925pt x 468.75125pt>
 File: Figure 1.png Graphic file (type png)
 <use Figure 1.png>
-Package pdftex.def Info: Figure 1.png  used on input line 119.
+Package pdftex.def Info: Figure 1.png  used on input line 120.
 (pdftex.def)             Requested size: 345.0pt x 224.39006pt.
  [4 <./Figure 1.png>] [5] [6]
 <Figure 2.png, id=31, 121.45375pt x 419.5675pt>
 File: Figure 2.png Graphic file (type png)
 <use Figure 2.png>
-Package pdftex.def Info: Figure 2.png  used on input line 150.
+Package pdftex.def Info: Figure 2.png  used on input line 151.
 (pdftex.def)             Requested size: 68.99895pt x 238.3557pt.
  [7 <./Figure 2.png>]
 <Figure 3.png, id=37, 689.57625pt x 294.09875pt>
 File: Figure 3.png Graphic file (type png)
 <use Figure 3.png>
-Package pdftex.def Info: Figure 3.png  used on input line 172.
+Package pdftex.def Info: Figure 3.png  used on input line 173.
 (pdftex.def)             Requested size: 345.0pt x 147.13875pt.
  [8 <./Figure 3.png>]
 <Figure 4.png, id=42, 219.82124pt x 438.63875pt>
 File: Figure 4.png Graphic file (type png)
 <use Figure 4.png>
-Package pdftex.def Info: Figure 4.png  used on input line 190.
+Package pdftex.def Info: Figure 4.png  used on input line 191.
 (pdftex.def)             Requested size: 137.9979pt x 275.37337pt.
  [9 <./Figure 4.png>]
 <Figure 5.png, id=47, 227.85126pt x 452.69125pt>
 File: Figure 5.png Graphic file (type png)
 <use Figure 5.png>
-Package pdftex.def Info: Figure 5.png  used on input line 204.
+Package pdftex.def Info: Figure 5.png  used on input line 205.
 (pdftex.def)             Requested size: 137.9979pt x 274.17952pt.
  [10 <./Figure 5.png>]
 <Figure 6.png, id=52, 224.84pt x 443.6575pt>
 File: Figure 6.png Graphic file (type png)
 <use Figure 6.png>
-Package pdftex.def Info: Figure 6.png  used on input line 217.
+Package pdftex.def Info: Figure 6.png  used on input line 218.
 (pdftex.def)             Requested size: 137.9979pt x 272.30954pt.
  [11 <./Figure 6.png>]
 <Figure 7.png, id=57, 230.8625pt x 452.69125pt>
 File: Figure 7.png Graphic file (type png)
 <use Figure 7.png>
-Package pdftex.def Info: Figure 7.png  used on input line 235.
+Package pdftex.def Info: Figure 7.png  used on input line 236.
 (pdftex.def)             Requested size: 137.9979pt x 270.59453pt.
  [12 <./Figure 7.png>]
 <Figure 8.png, id=62, 226.8475pt x 449.68pt>
 File: Figure 8.png Graphic file (type png)
 <use Figure 8.png>
-Package pdftex.def Info: Figure 8.png  used on input line 254.
+Package pdftex.def Info: Figure 8.png  used on input line 255.
 (pdftex.def)             Requested size: 137.9979pt x 273.55649pt.
  [13 <./Figure 8.png>]
 <Figure 9.png, id=68, 226.8475pt x 415.5525pt>
 File: Figure 9.png Graphic file (type png)
 <use Figure 9.png>
-Package pdftex.def Info: Figure 9.png  used on input line 264.
+Package pdftex.def Info: Figure 9.png  used on input line 265.
 (pdftex.def)             Requested size: 137.9979pt x 252.7955pt.
  [14 <./Figure 9.png>] [15]
 <Figure 10.png, id=76, 617.30624pt x 363.3575pt>
 File: Figure 10.png Graphic file (type png)
 <use Figure 10.png>
-Package pdftex.def Info: Figure 10.png  used on input line 320.
+Package pdftex.def Info: Figure 10.png  used on input line 321.
 (pdftex.def)             Requested size: 345.0pt x 203.0796pt.
  [16] [17 <./Figure 10.png>] [18] [19]
 <Figure 11.png, id=91, 695.59875pt x 493.845pt>
 File: Figure 11.png Graphic file (type png)
 <use Figure 11.png>
-Package pdftex.def Info: Figure 11.png  used on input line 428.
+Package pdftex.def Info: Figure 11.png  used on input line 429.
 (pdftex.def)             Requested size: 345.0pt x 244.93253pt.
  [20] [21 <./Figure 11.png>]
 <Figure 12.png, id=99, 920.43875pt x 435.6275pt>
 File: Figure 12.png Graphic file (type png)
 <use Figure 12.png>
-Package pdftex.def Info: Figure 12.png  used on input line 448.
+Package pdftex.def Info: Figure 12.png  used on input line 449.
 (pdftex.def)             Requested size: 345.0pt x 163.28679pt.
  [22 <./Figure 12.png>] (/usr/local/texlive/2023/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
-) [23] [24] (./nea.aux) ) 
+) [23] [24] [25]
+<Figure 13.jpeg, id=116, 2197.20876pt x 1259.70625pt>
+File: Figure 13.jpeg Graphic file (type jpg)
+<use Figure 13.jpeg>
+Package pdftex.def Info: Figure 13.jpeg  used on input line 628.
+(pdftex.def)             Requested size: 345.0pt x 197.78969pt.
+<Figure 14.jpeg, id=117, 2135.98pt x 1295.84125pt>
+File: Figure 14.jpeg Graphic file (type jpg)
+<use Figure 14.jpeg>
+Package pdftex.def Info: Figure 14.jpeg  used on input line 634.
+(pdftex.def)             Requested size: 345.0pt x 209.29636pt.
+<Figure 15.jpeg, id=118, 2034.60126pt x 1325.95375pt>
+File: Figure 15.jpeg Graphic file (type jpg)
+<use Figure 15.jpeg>
+Package pdftex.def Info: Figure 15.jpeg  used on input line 640.
+(pdftex.def)             Requested size: 345.0pt x 224.82242pt.
+ [26] [27 <./Figure 13.jpeg> <./Figure 14.jpeg>] [28 <./Figure 15.jpeg>] (./nea.aux) ) 
 Here is how much of TeX's memory you used:
- 3946 strings out of 476025
- 58249 string characters out of 5790017
+ 4023 strings out of 476025
+ 59791 string characters out of 5790017
  2119388 words of memory out of 5000000
- 24374 multiletter control sequences out of 15000+600000
+ 24441 multiletter control sequences out of 15000+600000
  517213 words of font info for 49 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,7n,62p,1086b,1351s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on nea.pdf (24 pages, 1308690 bytes).
+Output written on nea.pdf (28 pages, 2796575 bytes).
 PDF statistics:
- 152 PDF objects out of 1000 (max. 8388607)
- 83 compressed objects within 1 object stream
+ 168 PDF objects out of 1000 (max. 8388607)
+ 92 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 61 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 76 words of extra memory for PDF output out of 10000 (max. 10000000)
 

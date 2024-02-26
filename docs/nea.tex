@@ -6,6 +6,7 @@
 \usepackage{titlesec}
 \usepackage{wrapfig}
 \usepackage{tabularx}
+\usepackage{dirtree}
 
 \setcounter{secnumdepth}{4}
 
@@ -535,4 +536,114 @@ ENDFUNCTION
 \subsubsection{Accounts}
 
 Each account is represented by a model class derived from the framework module 'django.contrib.auth'. Each instance of a user class has an ID (integer), username (string), forename, surname and email (all strings). 
+
+Since the default user creation form in Django only includes the username and password, I will need to create a custom user creation form class that inherits from the superclass user creation form. It will then add in the extra fields so that the user can enter their names and email in the form. 
+
+For the registration form, I can use the default registration form as it works perfectly fine for my purposes. Validation is handled by the '.is\_valid()' method that every form inherits from 'django.contrib.auth.models' via the ModelForm superclass. 
+
+\subsubsection{Dashboard}
+
+The main data structure to consider for this is the relational database. Models will need to be created for each table of the database. It will inherit from the superclass 'models.Model', which will handle many of the methods involved with SQL manipulation. For the 'set' model, a 2D array will need to be used to create the inputs for set type, as they can take multiple pre-defined values. 
+
+Various views may need to take in multiple inputs from the HTTP request. Therefore, a dictionary would be the most appropriate data structure to store these. The key value pairs will consist of the variable name and the variable value. Values can then be popped off the dictionary when they need to be called. 
+
+\subsection{Test Plan}
+
+During the iterative development, I will test the functions as I create them to ensure they function correctly, documenting the testing as I go along. Then, post development, I will test the program as a whole to ensure it all works together cohesively. The test data here may not be complete as I haven't planned out all of the functions I will include in full detail yet, so as I develop iteratively I will come back to this and include more functions. 
+
+\subsubsection{Test Data}
+
+\paragraph{Registration Function}
+
+\begin{itemize}
+  \item Valid Data:
+  \begin{itemize}
+    \item Username: User123
+    \item Forename: John
+    \item Surname: Doe
+    \item Email: john.doe@example.com
+    \item Password: Password123!
+    \item Confirm Password: Password123!
+  \end{itemize}
+  \item Boundary Data (testing the limits of valid data, such as minimum/maximum lengths):
+  \begin{itemize}
+    \item Username: Us
+    \item Forename: J 
+    \item Surname: D
+    \item Email: j.d@example.co
+    \item Password: Passw0rd!
+    \item Confirm Password: Passw0rd!
+  \end{itemize}
+  \item Erroneous Data (data that should be rejected by the form):
+  \begin{itemize}
+    \item Username: User@123
+    \item Forename: John123
+    \item Surname: Doe!
+    \item Email: john.doe.com
+    \item Password: pass
+    \item Confirm Password: pass
+  \end{itemize}
+  \item Erroneous Data with SQL Injection Attempt (to test for security vulnerabilities):
+  \begin{itemize}
+    \item Username: 'User123'; DROP TABLE users; --
+    \item Forename: John
+    \item Surname: Doe
+    \item Email: john.doe@example.com
+    \item Password: Password123!
+    \item Confirm Password: Password123!
+  \end{itemize}
+\end{itemize}
+
+\paragraph{Login Function}
+
+\begin{itemize}
+  \item Valid Data:
+  \begin{itemize}
+    \item Username: validUser
+    \item Password: CorrectP@ssword1
+  \end{itemize}
+  \item Boundary Data:
+  \begin{itemize}
+    \item Username: u (minimum length allowed)
+    \item Password: P@ssw0rd (minimum complexity)
+  \end{itemize}
+  \item Erroneous Data:
+  \begin{itemize}
+    \item Username: invalidUser
+    \item Password: WrongPass
+  \end{itemize}
+  \item Complex Erroneous Data (SQL Injection Test):
+  \begin{itemize}
+    \item Username: admin' --
+    \item Password: anything
+  \end{itemize}
+\end{itemize}
+
+In each case, the valid data should work and be accepted, creating an account or logging in the user. The boundary data should do the same. The SQL injection attempts should be ineffective due to the abstraction layer provided by the object relational mapper that prevents user inputs from being mapped directly to SQL statements. The erroneous data should be rejected and errors should be returned specifying what needs to be corrected.
+
+\subsection{Usability Features}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=1\textwidth]{Figure 13.jpeg}
+  \caption{Mockup of the landing page}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=1\textwidth]{Figure 14.jpeg}
+  \caption{Mockup of the login page}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=1\textwidth]{Figure 15.jpeg}
+  \caption{Mockup of the register page}
+\end{figure}
+
+\newpage
+
+\section{Development}
+
+
 \end{document}

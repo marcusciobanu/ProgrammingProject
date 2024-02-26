@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1708894603 "/Users/marcusciobanu/Desktop/europaFitness/docs/nea.tex" "nea.pdf" "nea" 1708894605 0
-  "/Users/marcusciobanu/Desktop/europaFitness/docs/nea.tex" 1708894600 39433 a390eb11657a4a29428fcbf59e5e9a4a ""
+["pdflatex"] 1708946524 "/Users/marcusciobanu/Desktop/europaFitness/docs/nea.tex" "nea.pdf" "nea" 1708946527 0
+  "/Users/marcusciobanu/Desktop/europaFitness/docs/nea.tex" 1708946524 44205 327f43f3191d6315249a1ded968f4237 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -28,6 +28,8 @@
   "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb" 1248133631 24287 6b803fa9eb1ddff9112e00519b09dd9e ""
   "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb" 1215737283 138258 6525c253f16cededa14c7fd0da7f67b2 ""
   "/usr/local/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1461363279 71627 94eb9990bed73c364d7f53f960cc8c5b ""
+  "/usr/local/texlive/2023/texmf-dist/tex/generic/dirtree/dirtree.sty" 1355443861 1883 4aee9c0e00b4a0c2729c07aa1ea41bad ""
+  "/usr/local/texlive/2023/texmf-dist/tex/generic/dirtree/dirtree.tex" 1355443861 5890 e9acda8da77544e04e1e6041a77a14c7 ""
   "/usr/local/texlive/2023/texmf-dist/tex/latex/base/article.cls" 1667332637 20144 d5ecf0a5140c8d8d8b72cbe86e320eff ""
   "/usr/local/texlive/2023/texmf-dist/tex/latex/base/size10.clo" 1667332637 8448 c33a4e1cb35cee9b33c2b21033b73e39 ""
   "/usr/local/texlive/2023/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty" 1579991033 13886 d1306dcf79a944f6988e688c1785f9ce ""
@@ -59,6 +61,9 @@
   "Figure 10.png" 1708520537 138165 f92e6a34961ab991ef73da9062c31793 ""
   "Figure 11.png" 1708883367 133583 ce9caa467124b53b44527912085754b1 ""
   "Figure 12.png" 1708885196 215613 a22e4c82ebf68086a942659b1cf6de7c ""
+  "Figure 13.jpeg" 1708945091 573803 89ee0ba697ccadedc3b1ba2898b87def ""
+  "Figure 14.jpeg" 1708945955 457293 0249446949f671bef4893c261f9820fd ""
+  "Figure 15.jpeg" 1708946155 449921 a1e80d710331daef3c67b31587f57419 ""
   "Figure 2.png" 1708516312 26801 51b950f58545787dcecb622c3c2c4a75 ""
   "Figure 3.png" 1708517861 130738 8cf7cd80f296c0ce36d56c3d190482f3 ""
   "Figure 4.png" 1708518543 155264 1c60f53680906b938f3b43d66af98e2f ""
@@ -67,9 +72,9 @@
   "Figure 7.png" 1708518999 88620 56cb820984ea8439559f5a94624a40f1 ""
   "Figure 8.png" 1708519218 140336 c68d6e292924e4a7854ab43b48612eee ""
   "Figure 9.png" 1708519321 139268 6bcb5de6b873fb3f1ad2efb8dff8f58e ""
-  "nea.aux" 1708894605 6711 0b7c37c517d87a2f260d3b58fdbc60b3 "pdflatex"
-  "nea.tex" 1708894600 39433 a390eb11657a4a29428fcbf59e5e9a4a ""
-  "nea.toc" 1708894605 2976 858f4ce525ef02b12f6ac190b344bce1 "pdflatex"
+  "nea.aux" 1708946526 7970 cd23b5507c9984dcdf07d5acc5422372 "pdflatex"
+  "nea.tex" 1708946524 44205 327f43f3191d6315249a1ded968f4237 ""
+  "nea.toc" 1708946526 3515 214e433661319ceb014b8a865dbff969 "pdflatex"
   (generated)
   "nea.aux"
   "nea.log"
