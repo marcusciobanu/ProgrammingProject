@@ -7,6 +7,8 @@
 \usepackage{wrapfig}
 \usepackage{tabularx}
 \usepackage{dirtree}
+\usepackage{xcolor}
+\usepackage{floatrow}
 
 \setcounter{secnumdepth}{4}
 
@@ -15,78 +17,30 @@
 \titlespacing*{\paragraph}
 {0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
 
-% Define colors for syntax highlighting
+% Define colors
 \definecolor{codegreen}{rgb}{0,0.6,0}
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
 \definecolor{codepurple}{rgb}{0.58,0,0.82}
 \definecolor{backcolour}{rgb}{0.95,0.95,0.92}
 
-% Global settings
+% Define global lstlisting settings
 \lstset{
-    backgroundcolor=\color{backcolour},   
-    commentstyle=\color{codegreen},
-    keywordstyle=\color{magenta},
-    numberstyle=\tiny\color{codegray},
-    stringstyle=\color{codepurple},
-    basicstyle=\footnotesize\ttfamily,
-    breakatwhitespace=false,         
-    breaklines=true,                 
-    captionpos=b,                    
-    keepspaces=true,                 
-    numbers=left,                    
-    numbersep=5pt,                  
-    showspaces=false,                
-    showstringspaces=false,
-    showtabs=false,                  
-    tabsize=4
-}
-
-% Language-specific settings
-\lstdefinestyle{Python}{
-    language=Python,
-    otherkeywords={self},             % Add keywords here
-    morekeywords=[2]{True,False},     % Add built-in literals here
-    keywordstyle=\color{blue},
-    keywordstyle=[2]\color{codepurple}, % style for built-in literals
-}
-
-\lstdefinestyle{HTML}{
-    language=HTML,
-    tagstyle=\color{blue},
-    usekeywordsintag=true,
-    morekeywords={html, body, div, span}, % Add HTML tags here
-}
-
-\lstdefinestyle{CSS}{
-    language=CSS,
-    keywordstyle=\color{blue},
-    morekeywords={margin, padding}, % Add CSS properties here
-}
-
-\lstdefinestyle{JavaScript}{
-    language=JavaScript,
-    keywordstyle=\color{blue},
-    morekeywords={const, let, function}, % Add JavaScript keywords here
-}
-
-\lstdefinestyle{OCRPseudocode}{
-    language=Python, 
-    morekeywords={FUNCTION, ENDFUNCTION, IF, THEN, ELSE, ENDIF, RETURN, WITH}, 
-    keywordstyle=\color{magenta}, 
-    identifierstyle=\color{black}, 
-    sensitive=false, 
-    commentstyle=\color{codegreen}\ttfamily, 
-    stringstyle=\color{codepurple}, 
-    basicstyle=\footnotesize\ttfamily, 
-    breaklines=true, 
-    numbers=left, 
-    numberstyle=\tiny\color{codegray}, 
-    showstringspaces=false, 
-    frame=single, 
-    backgroundcolor=\color{backcolour}, 
-    rulecolor=\color{black}, 
-    tabsize=4, 
-    captionpos=b
+    language=C, % Change this to the desired language
+    basicstyle=\small\ttfamily, % Set the basic font style and size
+    numbers=left, % Display line numbers on the left
+    numberstyle=\tiny\color{codegray}, % Set the line number style
+    stepnumber=1, % Set the step between line numbers
+    numbersep=5pt, % Set the distance between line numbers and code
+    backgroundcolor=\color{backcolour}, % Set the background color
+    showspaces=false, % Don't show spaces in strings
+    showstringspaces=false, % Don't show spaces in strings as special characters
+    showtabs=false, % Don't show tabs as special characters
+    tabsize=4, % Set the tab size
+    captionpos=b, % Set the caption position at the bottom
+    breaklines=true, % Wrap long lines
+    breakatwhitespace=true, % Wrap at whitespace
+    escapeinside={\%*}{*)}, % Add LaTeX code within your code
+    morekeywords={*,...}, % Add more keywords if necessary
 }
 
 \title{Exercise Tracker Website \\ \vspace{10pt} \large Computer Science A-Level Project \normalsize}
@@ -186,7 +140,7 @@ There are two major existing systems that offer a workout tracking system simila
 \paragraph{Hevy}
 Hevy is the premier workout tracking app on the Android Play Store. The platform is different to the proposed solution (mobile vs. browser) but the core features remain the same and so it is valid to analyse. It incorporates workout tracking with a social media system where you can follow others and share your workouts and progress with a following. It works sort of like Instagram in that regard, being able to like and comment on others workouts. However, this element of the program is completely optional as you can make your account private, so for the purpose of this research, I will not be looking at this element of the program. It is also the cheaper of the 2 existing solutions priced at £2.99/month compared to Strong which is £4.69/month. 
 
-\begin{figure}
+\begin{figure}[H]
   \centering
   \includegraphics[width=0.4\textwidth]{Figure 4.png}
   \caption{Quick start page}
@@ -200,7 +154,7 @@ See Figure 4, the main section of the application which allows you to record you
 
 There is also an option to create routine folders. This allows increased organisation and to periodise your training into blocks sorted by folder (a useful feature for more advanced lifters who may want to alternate between load and deload periods). This could definitely be a feature to adopt in order to ensure that the program has adequate tailoring for all ability ranges. 
 
-\begin{figure}
+\begin{figure}[H]
   \centering
   \includegraphics[width=0.4\textwidth]{Figure 5.png}
   \caption{Statistics page}
@@ -213,7 +167,7 @@ The statistics section of the application is rather unique to Hevy, where you ca
 The advanced statistics section allows for a more indepth look at what the heatmap gives you at a glance. It logs sets per muscle group and shows a spider web chart of the distribution. All of these features can be leveraged for increased control and data on your progress. However, all of this is optional and doesn’t need to be used which is a good feature of
 Hevy. It is as in depth and detailed as you want it to be.
 
-\begin{figure}
+\begin{figure}[H]
   \centering
   \includegraphics[width=0.4\textwidth]{Figure 6.png}
   \caption{Add exercise page}
@@ -231,7 +185,7 @@ See Figure 7, this is the exercise creation menu. It can be accessed from the ex
 
 You can create any exercise possible due to the features of the creation menu. A custom name and picture can be given. More importantly, the muscles it targets (both primary and secondary) are included, as well as the exercise type and equipment. This allows it to be included in the statistics section (heatmap, spiderweb) and also allows you to adjust weight and reps for progressive overload. 
 
-\begin{figure}
+\begin{figure}[H]
   \centering
   \includegraphics[width=0.4\textwidth]{Figure 7.png}
   \caption{Create exercise page}
@@ -250,7 +204,7 @@ This information is rather surface level and doesn’t really provide much usefu
 
 The profile system is also a lot less developed than Hevy. This makes sense, since Hevy also doubles as a fitness social media app in many ways, so Strong would have little reason to invest in such features. In my app, I would probably take a similar approach to Strong, as it will operate as a standalone package and users will not be able to interact with each other. 
 
-\begin{figure}
+\begin{figure}[H]
   \centering
   \includegraphics[width=0.4\textwidth]{Figure 8.png}
   \caption{Home page}
@@ -260,7 +214,7 @@ The workout menu also functions in a very similar way to Hevy. However, the temp
 
 Despite this, all the other features are practically identical to Hevy. They function as intended and have utility. The base template of a workout tracker seems to be consistent no matter the developers which is a testament to its effectiveness. A quick start and template system will be integral to the workout tracking system in my application.
 
-\begin{figure}
+\begin{figure}[H]
   \centering
   \includegraphics[width=0.4\textwidth]{Figure 9.png}
   \caption{Workout menu}
@@ -460,7 +414,7 @@ The proposed solution, when broken down, broadly separates into two main categor
 
 \subsubsection{Accounts}
 
-\begin{lstlisting}[style=OCRPseudocode, caption={Login Page}]
+\begin{lstlisting}[caption={Login Page}]
   FUNCTION loginpage(request):
   IF the request is a POST:
       Make a form with the POST data.
@@ -478,7 +432,7 @@ The proposed solution, when broken down, broadly separates into two main categor
 ENDFUNCTION
 \end{lstlisting}
 
-\begin{lstlisting}[style=OCRPseudocode, caption={Register Page}]
+\begin{lstlisting}[caption={Register Page}]
   FUNCTION registerpage(request)
   IF form submitted THEN
     Create form with submitted data
@@ -495,7 +449,7 @@ ENDFUNCTION
 
 \end{lstlisting}
 
-\begin{lstlisting}[style=OCRPseudocode, caption={CustomUserCreationForm}]
+\begin{lstlisting}[caption={CustomUserCreationForm}]
   CLASS CustomUserCreationForm INHERITS UserCreationForm
   SETUP form to use User model and add fields: first name, last name, email
 ENDCLASS
@@ -503,7 +457,7 @@ ENDCLASS
 
 \subsubsection{Dashboard}
 
-\begin{lstlisting}[style=OCRPseudocode, caption={Exercise Creation view}]
+\begin{lstlisting}[caption={Exercise Creation view}]
   FUNCTION create(request)
   IF user logged in THEN
     Get user exercises
@@ -522,7 +476,7 @@ ENDFUNCTION
 
 \end{lstlisting}
 
-\begin{lstlisting}[style=OCRPseudocode, caption={Exercise deletion view}]
+\begin{lstlisting}[caption={Exercise deletion view}]
   FUNCTION delete_exercise(request, exercise_id)
   IF user logged in AND form submitted THEN
     Find exercise by id for the logged-in user
@@ -530,6 +484,8 @@ ENDFUNCTION
   Redirect to create page regardless
 ENDFUNCTION
 \end{lstlisting}
+
+These algorithms do not form the entire solution, as I haven't planned in detail every single function that will make up every app. Arguably, the most complex function will be the workout app main function, as it will involve other modules and classes from throughout the whole function. Therefore, there is an element to iteration to this design, and I will come back to it in the future once I reach the parts that require more design.
 
 \subsection{Identification of Key Variables, Data Structures and Classes}
 
@@ -645,5 +601,826 @@ In each case, the valid data should work and be accepted, creating an account or
 
 \section{Development}
 
+\subsection{Iteration 1}
 
+For the first iteration, I created a basic markup of the landing page with a couple of styles. It was very rudimentary and only served to create an idea of what the website could begin to look like. There was no logic to the page and it was purely made up of static files with no backend code. 
+
+\begin{lstlisting}[caption={index.html}]
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>trackR</title>
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body>
+    <header class="name">
+      <a href="landingpage.html">
+        trackR
+      </a>
+    </header>
+  
+    <nav class="menubar">
+      <div>
+        <ul>
+          <li>
+            <a href="#">
+              Login
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              Create Account
+            </a>
+          </li>
+          <li>
+            <a href="#">
+                <img src="html/img/pfp.png" alt="Profile Picture" width="40">
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  
+    <div class="placeholder">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, voluptatibus laborum iure quia neque sint alias repellat eos quod quidem molestiae? Ullam, quibusdam ipsam consequuntur omnis doloribus ea quis beatae
+      </p>
+    </div>
+  
+  </body>
+  </html>
+\end{lstlisting}
+
+The page consisted of a simple nav bar and placeholder for the main portion of the page. It was more or less a less abstracted version of the landing page detailed in the usability features sections, translated into HTML and CSS.
+
+\begin{lstlisting}[caption={style.css}]
+  body {
+  font-family: Helvetica;
+  font-weight: 100;
+  background-color: white;
+  margin: 0;
+}
+
+.name {
+  background-color: #19747E;
+  padding-left: 10px;
+  font-size: 40px;
+  font-weight: bolder;
+  color: black;
+  text-decoration: none;
+}
+
+.name a{
+  font-size: 40px;
+  font-weight: bolder;
+  color: black;
+  text-decoration: none;
+}
+
+.menubar {
+  background-color: #A9D6E5;
+  overflow: hidden;
+  text-align: right;
+}
+
+.menubar ul{
+  height: 50%;
+  margin: auto;
+  list-style: none;
+}
+
+.menubar li{
+  display: inline;
+  padding: 25px;
+}
+
+.menubar a{
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.menubar li:hover{
+  background-color: #19747E;
+}
+
+.placeholder {
+  padding: 5px 15px;
+  line-height: 1.4em;
+}
+\end{lstlisting}
+
+This rudimentary CSS just made the page bearable to look at. The design was inefficient and inelegant but for a first attempt it would suffice. 
+
+\subsection{Iteration 2}
+
+For this iteration, focus was concentrated on the front-end, working to build up a clean and interactive UI from which I could build the program logic around when it came to the backend. It is also important to note that at this point, I had little to no knowledge of backend development, and was essentially learning as I go along, building up from the basics.
+
+This iteration specifically involved a complete overhaul of the landing page design and a first iteration at the login form and register form. Still, there was no actual functionality and it was purely about the GUI. 
+
+\begin{lstlisting}[caption={landingpage.html}]
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homepage</title>
+  <link rel="stylesheet" href="/landingPage/css/landingPage.css">
+</head>
+
+<body>
+
+<!-- Content for menubar -->
+
+  <header class="menubar">
+    <h2 class="logo">europa fitness</h2>
+    <nav class="navigation">
+      <a href="landingpage.html">Home</a>
+      <button class="loginBtn">Login</button>
+    </nav>
+  </header>
+  
+<!-- Content for login form -->
+
+  <div class="wrapper">
+    <span class="closeButton">
+      <ion-icon name="close-sharp"></ion-icon>
+    </span>
+    <div class="loginForm">
+      <h2>Login</h2>
+      <form action="#">
+        <div class="inputBox">
+          <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+          <input type="email" required>
+          <label>Email</label>
+        </div>
+        <div class="inputBox">
+          <span class="icon"><ion-icon name="key-outline"></ion-icon></span>
+          <input type="password" required>
+          <label>Password</label>
+        </div>
+        <div class="rememberForgot">
+          <label><input type="checkbox"> Remember me!</label>
+          <a href="#">Forgot Password?</a>
+        </div>
+        <button type="submit" class="btn">Login</button>
+        <div class="loginRegister">
+          Don't have an account? <a href="#" class="registerLink">Register!</a>
+        </div>
+      </form>
+    </div>
+    
+<!-- Content for register form -->
+
+    <div class="registerForm">
+      <h2>Register</h2>
+      <form action="#">
+        <div class="inputBox">
+          <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+          <input type="text" required>
+          <label>Username</label>
+        </div>
+        <div class="inputBox">
+          <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+          <input type="email" required>
+          <label>Email</label>
+        </div>
+        <div class="inputBox">
+          <span class="icon"><ion-icon name="key-outline"></ion-icon></span>
+          <input type="password" required>
+          <label>Password</label>
+        </div>
+        <div class="rememberForgot">
+          <label><input type="checkbox"> Remember me!</label>
+        </div>
+        <button type="submit" class="btn">Create Account</button>
+        <div class="loginRegister">
+          <p>Have an account?</p><a href="#" class="loginLink">Login!</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+<!-- Main bulk content for the landing page -->
+
+  <div class="landingPagePlaceholder">
+    <img src="/landingPage/html/img/gymstockimage.jpg" alt="Man lifting weight">
+    <h1 id="text1">exercise.</h1>
+    <h1 id="text2">diet.</h1>
+    <h1 id="text3">all for</h1>
+    <h1 id="text4">FREE.</h1>
+    <img src="/landingPage/html/img/gymstockimage2.jpg" alt="Rack of weights">
+  </div>
+
+<!-- Main script for the landing page -->
+
+<script src="/landingPage/js/landingPage.js"></script>
+
+<!-- Script to access icons used in login and register forms -->
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0
+  /dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0
+  /dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
+\end{lstlisting}
+
+The landing page is now essentially completed. It has a fully fledged and stylized navbar, with a login page that pops up when you press the login button. You can also select the register page from the login page. I also used the Ionicons API to utilize their free open source icons within the markup directly.
+
+\begin{lstlisting}[caption={landingpage.css}]
+  /* Import the font used for the website. */
+
+@import url('https://fonts.googleapis.com
+  /css2?family=Poppins:wght@500&display=swap');
+
+/* Defining the base attributes for any element on the page. */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+  color: white;
+}
+
+/* Animations and attributes for the top navigation bar */
+
+.menubar {
+  background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 100px;
+  box-shadow: 0 10px 8px black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+.logo {
+  font-size: 2em;
+  user-select: none;
+}
+.logo:hover{
+  cursor: default;
+  color: #afeeee;
+  transition-duration: 1s;
+}
+.logo:not(:hover){
+  cursor: default;
+  color: white;
+  transition-duration: 1s;
+}
+.navigation a{
+  color: white;
+  text-decoration: none;
+  position: relative;
+  font-size: 1.2em;
+  margin-left: 2.5em;
+}
+.navigation a::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -0.3em;
+  width: 0;
+  height: 0.15em;
+  border-radius: 0.4em;
+  background-color: white;
+  transition: 0.3s ease-in-out; 
+  pointer-events: none; 
+}
+.navigation a:hover::after, .navigation a:focus::after {
+  width: 100%;
+}
+.navigation .loginBtn {
+  font-size: 1.2em;
+  width: 5.5em;
+  height: 2.5em;
+  background: transparent;
+  border: 0.15em solid;
+  outline: none;
+  border-radius: 0.4em;
+  cursor: pointer;
+  margin-left: 2.5em;
+}
+.navigation .loginBtn:hover{
+  background-color: white;
+  border-color: white;
+  color: black;
+  transition: 0.5s;
+}
+.navigation .loginBtn:not(:hover){
+  background-color: black;
+  color: white;
+  transition-duration: 0.5s;
+}
+
+
+/* Designing the login form and the register form */
+
+.wrapper{
+  position: fixed;
+  top: 10em;
+  width: 25em;
+  height: 35em;
+  background: transparent;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  border: 0.15em white solid;
+  border-radius: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  overflow: hidden;
+  transform: scale(0);
+  transition: transform .5s ease, height .2s ease;
+}
+.wrapper.popup{
+  transform: scale(1);
+}
+.closeButton{
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: transparent;
+  width: 1.5em;
+  height: 1.5em;
+  color: white;
+  font-size: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom-left-radius: 20px;
+  transition-duration: 0.5s;
+}
+.closeButton:hover {
+  cursor: pointer;
+  background-color: white;
+  color: black;
+}
+.loginForm,
+.registerForm{
+  width: 70%;
+  padding: 1em;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  z-index: 11;
+}
+.wrapper .loginForm{
+  transition: .18s ease;
+  transform: translateX(0);
+}
+.wrapper.active .loginForm{
+  transition: .18s ease;
+  transform: translateX(-30em);
+}
+.registerForm{
+  position: absolute;
+  transition: .18s ease;
+  transform: translateX(30em);
+}
+.wrapper.active .registerForm{
+  transition: .18s ease;
+  transform: translateX(0);
+}
+.loginForm *,
+.registerForm *{
+  background: transparent;
+}
+.loginForm h2,
+.registerForm h2{
+  font-size: 2em;
+  text-align: center;
+}
+.inputBox{
+  position: relative;
+  width: 100%;
+  height: 3em;
+  border-bottom: 0.1em solid white;
+  margin: 30px 0;
+}
+.inputBox label{
+  position: absolute;
+  top: 50%;
+  left: 0.1em;
+  transform: translateY(-50%);
+  pointer-events: none;
+  transition-duration: 0.5s;
+}
+.inputBox input:focus~label,
+.inputBox input:valid~label{
+  top: 0.001em;
+}
+.inputBox input{
+  color: white;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border: none;
+  font-size: 1em;
+  padding: 0.1em 1.5em 0 0;
+}
+.inputBox .icon{
+  position: absolute;
+  right: 0.1em;
+  top: 0.6em;
+  font-size: 1.2em;
+}
+.rememberForgot{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 0.8em;
+  margin: -1.2em 0 2em 0;
+}
+.rememberForgot label input{
+  accent-color: white;
+  margin-right: 0.3em;
+}
+.rememberForgot a{
+  color: white;
+  text-decoration: none;
+}
+.rememberForgot a:hover{
+  text-decoration: underline;
+}
+.btn{
+  color: white;
+  width: 100%;
+  margin-bottom: 1.5em;
+  padding: 1em;
+  border: white solid 0.175em;
+  border-radius: 1em;
+  cursor: pointer;
+  transition-duration: 0.5s;
+}
+.btn:hover{
+  background: white;
+  color: black;
+}
+.loginRegister,
+.loginLink{
+  width: 100%;
+  font-size: 0.9em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.loginRegister a{
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+}
+.loginRegister a:hover{
+  text-decoration: underline;
+}
+.registerForm .loginRegister{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.registerForm .loginRegister p{
+  width: 25em;
+}
+
+/* Designing the contents of the landing page*/
+
+.landingPagePlaceholder {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  user-select: none;
+}
+.landingPagePlaceholder #text1{
+  font-size: 10em;
+  background-color: transparent;
+  position: absolute;
+  z-index: 5;
+  bottom: 1.3em;
+}
+.landingPagePlaceholder #text2{
+  font-size: 10em;
+  background-color: transparent;
+  position: absolute;
+  z-index: 5;
+}
+.landingPagePlaceholder #text3{
+  font-size: 10em;
+  background-color: transparent;
+  position: absolute;
+  top: 14em;
+  z-index: 5;
+}
+.landingPagePlaceholder #text4{
+  font-size: 10em;
+  background-color: transparent;
+  position: absolute;
+  top: 15em;
+  z-index: 5;
+}
+
+/* Animating the 'FREE' text to change color when hovering and vice versa. */
+
+.landingPagePlaceholder #text4:hover{
+  cursor: default;
+  color: #afeeee;
+  transition-duration: 1s;
+}
+.landingPagePlaceholder #text4:not(:hover){
+  cursor: default;
+  color: white;
+  transition-duration: 1s;
+}
+
+/* Styling the images on the landing page  */
+
+.landingPagePlaceholder img{
+  width: 80%;
+  filter: grayscale(100%) brightness(50%);
+  margin-left: auto;
+  margin-right: auto;
+  margin: 5em;
+  position: relative;
+  top: 5em;
+  border-radius: 1em;
+}
+
+/* In terms of efficiency and conciseness of code, this is very bloated. I could have accomplished the same thing in a much sleeker way, but for a first attempt it will suffice. */
+\end{lstlisting}
+
+Within the CSS i created animations on hover to make the buttons dynamic. The login form activates via a wrapper that makes it visible, applying appropriate styles. 
+
+\begin{lstlisting}[caption={app.js}]
+  // Defining constants to make writing easier and more concise
+
+const wrapper = document.querySelector('.wrapper');
+const loginLink = document.querySelector('.loginLink');
+const registerLink = document.querySelector('.registerLink');
+const loginBtn = document.querySelector('.loginBtn');
+const closeButton = document.querySelector('.closeButton');
+
+// Detects when user clicks register button and adds class to .wrapper 
+
+registerLink.addEventListener('click', ()=> {
+  wrapper.classList.add('active');
+});
+
+// Detects when user clicks login button and removes class from .wrapper
+
+loginLink.addEventListener('click', ()=> {
+  wrapper.classList.remove('active');
+});
+
+// Detects when user clicks on menubar login button and adds popup class to .wrapper
+
+loginBtn.addEventListener('click', ()=> {
+  wrapper.classList.add('popup');
+  wrapper.classList.remove('active')
+});
+
+// Detects when user clicks on cross icon and removes popup class from .wrapper
+
+closeButton.addEventListener('click',()=> {
+  wrapper.classList.remove('popup');
+});
+\end{lstlisting}
+
+Here is the simple JavaScript that adds event listeners to the various buttons in the navbar. It adds active and pop up bars to toggle various CSS classes that will make the login and register pages visible.
+
+\subsection{Iteration 3}
+
+At this point, work began on the backend of the website. I had initialized the Django project, configured the various settings files to suit my needs and instantiated the database (SQLite3), applying the default migrations which set up the administration page (this included the default User and Groups models). As with any framework, there are a lot of boilerplate files created automatically, which, although contain important information, would be unnecessary to document here. For each iteration from now on, only the essential files will be included. 
+
+In terms of the additional functionality I had added at this point, I had routed the URLs to the appropriate views which simply rendered the static pages. I had essentially hooked up the frontend components I had created in the previous iterations to the backend which at this point only serves the correct static files from the HTTP request received when the user enters the URL. 
+
+Here is an overview of the file structure of the project at this point in time. 
+
+\begin{figure}[H] 
+  \centering
+  \includegraphics[width=0.5\textwidth]{Figure 16.png}
+  \caption{Top level file structure}
+\end{figure}
+
+There is quite a lot to unpack here so I will go one by one and explain the functions of each directory. 
+
+\subsubsection{Index, login, master, register}
+
+Each of these directories represent apps. It is a design methodology that places emphasis on modularity. Each app should be fully independent and contain all the necessary components and static files to function independently. The idea is that you can 'plug and play' each app, inserting it into a project and reusing it where needed. Each app consists of a couple of key files. A urls.py, views.py, models.py, forms.py and more depending on the range of functionality required by the app. Even within an app, modularity is encouraged to separate the code into different modules that serve different purposes. 
+
+Within this iteration of the project, there are 4 apps: index, login, master, register. Master is the entry point for the application. When the 'runserver' command is ran from the manage.py script, the project is configured to enter the application from the master application which contains the urls.py for the root URL. It also contains the settings.py file that contains all the configuration for the project. 
+
+\subsubsection{Static}
+
+Within this iteration, since there weren't too many components, I collected all of the static files underneath one directory within the root directory of the project. For production, you would typically create static directories within each of your apps. The static directory is divided into sub-directories for each app. Each contains the necessary static files (that is, CSS, images, JS, audio etc.) needed to be accessed by the various templates. Configured in the settings.py in the master app, the framework knows where to look for these static files as defined when I created the Django project. 
+
+\subsubsection{Templates}
+
+These are the templates for the project. Templates are modified HTML files using the Django templating language which allows context variables to be manipulated within the markup directly. That is, you can dynamically pass in values and perform operations on them such as looping over them. When the view renders the template upon a request for that file, the templating engine built into Django dynamically creates the HTML file to be served to the user depending on the data passed through the view function. It is far more efficient and allows dynamic web pages to be created based on data retrieved from the models. 
+
+\subsubsection{.gitignore}
+
+A file that specifies files to ignore when commiting to the git repository. For example, you wouldnt want to commit sensitive information, encryption keys and the like when creating a respository in production. 
+
+\subsubsection{db.sqlite3}
+
+This is the database for the project. Currently it only has the default user and group models. 
+
+\subsubsection{manage.py}
+
+A python script that allows you to manage the Django project. Also provides functionality for a simple development server that runs on the local host 127.0.0.1 at port 8000. Not suitable for production but entirely sufficient for development purposes. 
+
+\subsubsection{Backend functioality}
+
+\begin{lstlisting}[caption={master/urls.py}]
+  from django.contrib import admin
+  from django.urls import include, path
+
+  urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', include('index.urls')),
+    path('login/', include('login.urls')),
+    path('register/', include('register.urls')),
+  ]
+\end{lstlisting}
+
+This is the entry point for the application. When the user enters a URL that corresponds to the domain name of the website, Django will enter from this file to parse the URL and decide which file to serve. When the root URL is followed by 'login/', the login.urls is included. That means that the urls.py from the login app is called and the rest of the URL is cut off and sent to that module for further processing. 
+
+As an example, lets have a look at what happens when the root URL is entered and the URL is sent to index.urls to resolve.
+
+\begin{lstlisting}[caption={index/urls.py}]
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('', views.homepage, name='homepage')
+]
+\end{lstlisting}
+
+As can be seen, the urls.py assigns the root URL to the views.homepage, which is an imported module from the views.py file within the same app. This means that it is now up to the homepage function within the views file to decide what to serve to the user. 
+
+\begin{lstlisting}[caption={index/views.py}]
+from django.shortcuts import render
+
+
+def homepage(request):
+    return render(request, 'index.html')
+\end{lstlisting}
+
+Here is the very simple views.py file which contains only the homepage function. This function takes in the HTTP request as a parameter (this is conventional, even if the response is static by nature and doesn't require any information from the HTTP request) and returns the rendered HTML template that is index.html. 
+
+\subsubsection{Iterations on the frontend}
+
+Within this iteration, I also made some modifications to the HTML templates. Namely, I modularized them further to separate the landing page, login page and register page into separate templates rendered in different URLs. 
+
+\begin{lstlisting}[caption={templates/index.html}]
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>welcome to europa!</title>
+        <link rel="stylesheet" href="{% static 'index/styles/index.css' %}" />
+    </head>
+    <body>
+        <!-- Content for menubar -->
+        <header class="menubar">
+            <h2 class="logo">europa fitness</h2>
+            <nav class="navigation">
+            <button class="loginBtn">Login</button>
+            </nav>
+        </header>
+
+        <!-- Main bulk content for the landing page -->
+
+        <div class="landingPagePlaceholder">
+            <img src='{% static 'index/img/gymstockimage.jpg' %}' alt="Man lifting weights">
+            <h1 id="text1">exercise.</h1>
+            <h1 id="text2">diet.</h1>
+            <h1 id="text3">all for</h1>
+            <h1 id="text4">FREE.</h1>
+            <img src='{% static 'index/img/gymstockimage2.jpg' %}' alt="Rack of weights">
+        </div>
+        <script src="{% static 'index/js/index.js' %}"></script>
+    </body>
+</html>
+\end{lstlisting}
+
+Here you can begin to see some of the templating language in action. At the beginning of the file, all of the static files needed are loaded from their respective directories and template expressions are used to reference the directories of the static files relative to their parent directories. The template engine will convert these to absolute urls upon rendering. This approach is far more maintainable as you can move static files around the project and simply change the STATIC\_FILES\_DIR setting in the settings.py file and the template engine will recognise this and resolve the URLs based on the new settings rather than you having to go through every template and manualy change the URLs.  
+
+\begin{lstlisting}[caption={templates/login.html}]
+  <!doctype html>
+  <html lang="en">
+  {% load static %}
+      <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+          <meta http-equiv="X-UA-Compatible" content="ie=edge">
+          <title>Login to account</title>
+          <link rel="stylesheet" href="{% static 'login/styles/login.css' %}">
+          <link href='https://unpkg.com/boxicons@2.1.4
+            /css/boxicons.min.css' rel='stylesheet'>
+      </head>
+      <body>
+          <div class="wrapper">
+              <form action="">
+                  <h1>Login</h1>
+                  <div class="inputbox">
+                      <input type="text" placeholder="Username" required>
+                      <i class='bx bxs-user'></i>
+                  </div>
+                  <div class="inputbox">
+                      <input type="password" placeholder="Password" required>
+                      <i class='bx bxs-key'></i>
+                  </div>
+                  <div class="rememberForgot">
+                      <label><input type="checkbox"> Remember me?</label>
+                      <a href="#">Forgot Password?</a>
+                  </div>
+                  <button type="submit" class="button">Login</button>
+                  <div class="registerLink">
+                      <p>Don't have an account? <a href="../register">Register</a></p>
+                  </div>
+              </form>
+          </div>
+      </body>
+  </html>
+\end{lstlisting}
+
+\begin{lstlisting}[caption={templates/register.html}]
+  <!doctype html>
+  <html lang="en">
+  {% load static %}
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Register for an account</title>
+      <link rel="stylesheet" href="{% static 'register/styles/register.css' %}">
+      <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  
+  </head>
+  <body>
+      <div class="wrapper">
+          <form action="">
+              <h1>Registration</h1>
+              <div class="inputbox">
+                  <div class="inputfield">
+                      <input type="text" placeholder="Full Name" required>
+                      <i class='bx bxs-user'></i>
+                  </div>
+                  <div class="inputfield">
+                      <input type="text" placeholder="Username" required>
+                      <i class='bx bxs-user'></i>
+                  </div>
+              </div>
+              <div class="inputbox">
+                  <div class="inputfield">
+                      <input type="email" placeholder="Email" required>
+                      <i class='bx bxs-envelope'></i>
+                  </div>
+                  <div class="inputfield">
+                      <input type="number" placeholder="Phone Number" required>
+                      <i class='bx bxs-phone'></i>
+                  </div>
+              </div>
+              <div class="inputbox">
+                  <div class="inputfield">
+                      <input type="password" placeholder="Password" required>
+                      <i class='bx bxs-key'></i>
+                  </div>
+                  <div class="inputfield">
+                      <input type="password" placeholder="Confirm Password" required>
+                      <i class='bx bxs-key'></i>
+                  </div>
+              </div>
+              <label>Already have an account? <a href="../login">Click here!</a></label>
+              <button type="submit" class="button">Register</button>
+          </form>
+      </div>
+  </body>
+  </html>
+\end{lstlisting}
+
+It's a similar story with these other 2 templates. Static files are collected and served and the template is rendered and sent to the user when the appropriate URL is accessed. That about sums up the backend functionality added within this iteration. 
 \end{document}
+
