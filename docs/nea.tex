@@ -71,7 +71,7 @@ In recent years, the fitness industry has seen a boom in revenue and participati
 Following this point, the COVID-19 pandemic caused a major blow to the gym industry. However, this is not representative of fitness as a whole. What the pandemic actually caused was a huge influx of beginners to fitness who, as a result of their abundance of free time and boredom, took up exercise. Furthermore, the figure also indicates a huge gain in market size from 2021 to 2022 as gyms opened back up. It can be expected that this trend will continue and the fitness industry’s market share will soar to new heights as those who began exercising during the pandemic purchase gym memberships.
 \begin{figure}[ht]
   \raggedright
-  \includegraphics[width=1\textwidth]{Figure 1.png}
+  \includegraphics[width=1\textwidth]{img/Figure 1.png}
   \caption{Industry market size}
   \label{fig:Figure 1}
 \end{figure}
@@ -102,7 +102,7 @@ Through the use of a computational solution, we can identify recurring scenarios
 \newpage
 \paragraph{Thinking procedurally}
 \begin{wrapfigure}{l}{0.2\textwidth} % 'l' for left side, and width of the wrap
-  \includegraphics[width=0.2\textwidth]{Figure 2.png}
+  \includegraphics[width=0.2\textwidth]{img/Figure 2.png}
   \caption{Top-down design}
 \end{wrapfigure}
 When a user performs a workout, we understand that there will be a set ‘formula’ which they follow each time in a procedural manner. They would typically select an exercise, create a set then perform the reps that make up that set. Therefore, we can model this within the code through the use of a top-down design. 
@@ -124,7 +124,7 @@ Here is an example stakeholder to illustrate a typical use case:
 
 \begin{figure}[ht]
   \centering
-  \includegraphics[width=1\textwidth]{Figure 3.png}
+  \includegraphics[width=1\textwidth]{img/Figure 3.png}
   \caption{Example stakeholder}
 \end{figure}
 
@@ -142,7 +142,7 @@ Hevy is the premier workout tracking app on the Android Play Store. The platform
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.4\textwidth]{Figure 4.png}
+  \includegraphics[width=0.4\textwidth]{img/Figure 4.png}
   \caption{Quick start page}
 \end{figure}
 
@@ -156,7 +156,7 @@ There is also an option to create routine folders. This allows increased organis
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.4\textwidth]{Figure 5.png}
+  \includegraphics[width=0.4\textwidth]{img/Figure 5.png}
   \caption{Statistics page}
 \end{figure}
 
@@ -169,7 +169,7 @@ Hevy. It is as in depth and detailed as you want it to be.
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.4\textwidth]{Figure 6.png}
+  \includegraphics[width=0.4\textwidth]{img/Figure 6.png}
   \caption{Add exercise page}
 \end{figure}
 
@@ -187,7 +187,7 @@ You can create any exercise possible due to the features of the creation menu. A
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.4\textwidth]{Figure 7.png}
+  \includegraphics[width=0.4\textwidth]{img/Figure 7.png}
   \caption{Create exercise page}
 \end{figure}
 
@@ -206,7 +206,7 @@ The profile system is also a lot less developed than Hevy. This makes sense, sin
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.4\textwidth]{Figure 8.png}
+  \includegraphics[width=0.4\textwidth]{img/Figure 8.png}
   \caption{Home page}
 \end{figure}
 
@@ -216,7 +216,7 @@ Despite this, all the other features are practically identical to Hevy. They fun
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.4\textwidth]{Figure 9.png}
+  \includegraphics[width=0.4\textwidth]{img/Figure 9.png}
   \caption{Workout menu}
 \end{figure}
 
@@ -272,7 +272,7 @@ The listed features above are the most important because they provide the maximu
 
 \begin{figure}
   \centering
-  \includegraphics[width=1\textwidth]{Figure 10.png}
+  \includegraphics[width=1\textwidth]{img/Figure 10.png}
   \caption{Measurable criteria}
 \end{figure}
 
@@ -380,7 +380,7 @@ Handling the client-server dynamic will be a key consideration when developing t
 
 \begin{figure}
   \centering
-  \includegraphics[width=1\textwidth]{Figure 11.png}
+  \includegraphics[width=1\textwidth]{img/Figure 11.png}
   \caption{MVT architecture}
 \end{figure}
 
@@ -400,7 +400,7 @@ There are a couple of tables that need to be designed. In terms of users, there 
 
 \begin{figure}
   \centering
-  \includegraphics[width=1\textwidth]{Figure 12.png}
+  \includegraphics[width=1\textwidth]{img/Figure 12.png}
   \caption{ERD of database}
 \end{figure}
 
@@ -581,19 +581,19 @@ In each case, the valid data should work and be accepted, creating an account or
 
 \begin{figure}
   \centering
-  \includegraphics[width=1\textwidth]{Figure 13.jpeg}
+  \includegraphics[width=1\textwidth]{img/Figure 13.jpeg}
   \caption{Mockup of the landing page}
 \end{figure}
 
 \begin{figure}
   \centering
-  \includegraphics[width=1\textwidth]{Figure 14.jpeg}
+  \includegraphics[width=1\textwidth]{img/Figure 14.jpeg}
   \caption{Mockup of the login page}
 \end{figure}
 
 \begin{figure}
   \centering
-  \includegraphics[width=1\textwidth]{Figure 15.jpeg}
+  \includegraphics[width=1\textwidth]{img/Figure 15.jpeg}
   \caption{Mockup of the register page}
 \end{figure}
 
@@ -712,6 +712,10 @@ The page consisted of a simple nav bar and placeholder for the main portion of t
 \end{lstlisting}
 
 This rudimentary CSS just made the page bearable to look at. The design was inefficient and inelegant but for a first attempt it would suffice. 
+
+\subsubsection{Validation, Testing and Review}
+
+Since the site is still static in this iteration, there is no validation of any user inputs needed. The site loads fine and the static files are served appropriately on the local host server. Reviewing the actual code, I think that the CSS is bloated and some classes could be condensed to produce the same effect with less lines. The HTML markup is also rather bloated with line breaks and spaces where it is unneeded.
 
 \subsection{Iteration 2}
 
@@ -1206,6 +1210,10 @@ closeButton.addEventListener('click',()=> {
 
 Here is the simple JavaScript that adds event listeners to the various buttons in the navbar. It adds active and pop up bars to toggle various CSS classes that will make the login and register pages visible.
 
+\subsubsection{Validation, Testing and Review}
+
+The JavaScript works well and is succinct and concise, fulfilling its purpose in as few lines as possible. All of the functions work as expected and the active class is applied without fail. All tests pass as expected. Stylistically, the usability features work far better and the updated CSS makes the website far cleaner and easier to navigate. Overall, a major improvement from the previous iteration. 
+
 \subsection{Iteration 3}
 
 At this point, work began on the backend of the website. I had initialized the Django project, configured the various settings files to suit my needs and instantiated the database (SQLite3), applying the default migrations which set up the administration page (this included the default User and Groups models). As with any framework, there are a lot of boilerplate files created automatically, which, although contain important information, would be unnecessary to document here. For each iteration from now on, only the essential files will be included. 
@@ -1216,7 +1224,7 @@ Here is an overview of the file structure of the project at this point in time.
 
 \begin{figure}[H] 
   \centering
-  \includegraphics[width=0.5\textwidth]{Figure 16.png}
+  \includegraphics[width=0.5\textwidth]{img/Figure 16.png}
   \caption{Top level file structure}
 \end{figure}
 
@@ -1422,5 +1430,7 @@ Here you can begin to see some of the templating language in action. At the begi
 \end{lstlisting}
 
 It's a similar story with these other 2 templates. Static files are collected and served and the template is rendered and sent to the user when the appropriate URL is accessed. That about sums up the backend functionality added within this iteration. 
+
+\subsection{Iteration 4}
 \end{document}
 

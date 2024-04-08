@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.2.21)  29 FEB 2024 14:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.2.21)  29 FEB 2024 15:18
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -252,131 +252,131 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 3.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 3.
-)
+ [2])
 \tf@toc=\write3
 \openout3 = `nea.toc'.
 
- [2]
+ [3]
 Overfull \hbox (27.49701pt too wide) in paragraph at lines 62--63
 \OT1/cmtt/m/n/10 https : / / developer . mozilla . org / en-[]US / docs / Learn / Server-[]side / Django /
  []
 
-[3{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
-<Figure 1.png, id=19, 720.6925pt x 468.75125pt>
-File: Figure 1.png Graphic file (type png)
-<use Figure 1.png>
-Package pdftex.def Info: Figure 1.png  used on input line 74.
+[4{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
+<img/Figure 1.png, id=22, 720.6925pt x 468.75125pt>
+File: img/Figure 1.png Graphic file (type png)
+<use img/Figure 1.png>
+Package pdftex.def Info: img/Figure 1.png  used on input line 74.
 (pdftex.def)             Requested size: 345.0pt x 224.39006pt.
- [4 <./Figure 1.png>] [5] [6]
-<Figure 2.png, id=31, 121.45375pt x 419.5675pt>
-File: Figure 2.png Graphic file (type png)
-<use Figure 2.png>
-Package pdftex.def Info: Figure 2.png  used on input line 105.
+ [5 <./img/Figure 1.png>] [6] [7]
+<img/Figure 2.png, id=35, 121.45375pt x 419.5675pt>
+File: img/Figure 2.png Graphic file (type png)
+<use img/Figure 2.png>
+Package pdftex.def Info: img/Figure 2.png  used on input line 105.
 (pdftex.def)             Requested size: 13.79958pt x 47.66985pt.
- [7 <./Figure 2.png>]
-<Figure 3.png, id=37, 689.57625pt x 294.09875pt>
-File: Figure 3.png Graphic file (type png)
-<use Figure 3.png>
-Package pdftex.def Info: Figure 3.png  used on input line 127.
+ [8 <./img/Figure 2.png>]
+<img/Figure 3.png, id=40, 689.57625pt x 294.09875pt>
+File: img/Figure 3.png Graphic file (type png)
+<use img/Figure 3.png>
+Package pdftex.def Info: img/Figure 3.png  used on input line 127.
 (pdftex.def)             Requested size: 345.0pt x 147.13875pt.
- [8 <./Figure 3.png>]
-<Figure 4.png, id=42, 219.82124pt x 438.63875pt>
-File: Figure 4.png Graphic file (type png)
-<use Figure 4.png>
-Package pdftex.def Info: Figure 4.png  used on input line 145.
+ [9 <./img/Figure 3.png>]
+<img/Figure 4.png, id=45, 219.82124pt x 438.63875pt>
+File: img/Figure 4.png Graphic file (type png)
+<use img/Figure 4.png>
+Package pdftex.def Info: img/Figure 4.png  used on input line 145.
 (pdftex.def)             Requested size: 137.9979pt x 275.37337pt.
- [9 <./Figure 4.png>]
-<Figure 5.png, id=47, 227.85126pt x 452.69125pt>
-File: Figure 5.png Graphic file (type png)
-<use Figure 5.png>
-Package pdftex.def Info: Figure 5.png  used on input line 159.
+ [10 <./img/Figure 4.png>]
+<img/Figure 5.png, id=50, 227.85126pt x 452.69125pt>
+File: img/Figure 5.png Graphic file (type png)
+<use img/Figure 5.png>
+Package pdftex.def Info: img/Figure 5.png  used on input line 159.
 (pdftex.def)             Requested size: 137.9979pt x 274.17952pt.
- [10 <./Figure 5.png>]
-<Figure 6.png, id=52, 224.84pt x 443.6575pt>
-File: Figure 6.png Graphic file (type png)
-<use Figure 6.png>
-Package pdftex.def Info: Figure 6.png  used on input line 172.
+ [11 <./img/Figure 5.png>]
+<img/Figure 6.png, id=55, 224.84pt x 443.6575pt>
+File: img/Figure 6.png Graphic file (type png)
+<use img/Figure 6.png>
+Package pdftex.def Info: img/Figure 6.png  used on input line 172.
 (pdftex.def)             Requested size: 137.9979pt x 272.30954pt.
- [11 <./Figure 6.png>]
-<Figure 7.png, id=57, 230.8625pt x 452.69125pt>
-File: Figure 7.png Graphic file (type png)
-<use Figure 7.png>
-Package pdftex.def Info: Figure 7.png  used on input line 190.
+ [12 <./img/Figure 6.png>]
+<img/Figure 7.png, id=60, 230.8625pt x 452.69125pt>
+File: img/Figure 7.png Graphic file (type png)
+<use img/Figure 7.png>
+Package pdftex.def Info: img/Figure 7.png  used on input line 190.
 (pdftex.def)             Requested size: 137.9979pt x 270.59453pt.
- [12 <./Figure 7.png>]
-<Figure 8.png, id=62, 226.8475pt x 449.68pt>
-File: Figure 8.png Graphic file (type png)
-<use Figure 8.png>
-Package pdftex.def Info: Figure 8.png  used on input line 209.
+ [13 <./img/Figure 7.png>]
+<img/Figure 8.png, id=66, 226.8475pt x 449.68pt>
+File: img/Figure 8.png Graphic file (type png)
+<use img/Figure 8.png>
+Package pdftex.def Info: img/Figure 8.png  used on input line 209.
 (pdftex.def)             Requested size: 137.9979pt x 273.55649pt.
- [13 <./Figure 8.png>]
-<Figure 9.png, id=68, 226.8475pt x 415.5525pt>
-File: Figure 9.png Graphic file (type png)
-<use Figure 9.png>
-Package pdftex.def Info: Figure 9.png  used on input line 219.
+ [14 <./img/Figure 8.png>]
+<img/Figure 9.png, id=71, 226.8475pt x 415.5525pt>
+File: img/Figure 9.png Graphic file (type png)
+<use img/Figure 9.png>
+Package pdftex.def Info: img/Figure 9.png  used on input line 219.
 (pdftex.def)             Requested size: 137.9979pt x 252.7955pt.
- [14 <./Figure 9.png>] [15]
-<Figure 10.png, id=76, 617.30624pt x 363.3575pt>
-File: Figure 10.png Graphic file (type png)
-<use Figure 10.png>
-Package pdftex.def Info: Figure 10.png  used on input line 275.
+ [15 <./img/Figure 9.png>] [16]
+<img/Figure 10.png, id=79, 617.30624pt x 363.3575pt>
+File: img/Figure 10.png Graphic file (type png)
+<use img/Figure 10.png>
+Package pdftex.def Info: img/Figure 10.png  used on input line 275.
 (pdftex.def)             Requested size: 345.0pt x 203.0796pt.
- [16] [17 <./Figure 10.png>] [18] [19]
-<Figure 11.png, id=91, 695.59875pt x 493.845pt>
-File: Figure 11.png Graphic file (type png)
-<use Figure 11.png>
-Package pdftex.def Info: Figure 11.png  used on input line 383.
+ [17] [18 <./img/Figure 10.png>] [19] [20]
+<img/Figure 11.png, id=94, 695.59875pt x 493.845pt>
+File: img/Figure 11.png Graphic file (type png)
+<use img/Figure 11.png>
+Package pdftex.def Info: img/Figure 11.png  used on input line 383.
 (pdftex.def)             Requested size: 345.0pt x 244.93253pt.
- [20] [21 <./Figure 11.png>]
-<Figure 12.png, id=99, 920.43875pt x 435.6275pt>
-File: Figure 12.png Graphic file (type png)
-<use Figure 12.png>
-Package pdftex.def Info: Figure 12.png  used on input line 403.
+ [21] [22 <./img/Figure 11.png>]
+<img/Figure 12.png, id=102, 920.43875pt x 435.6275pt>
+File: img/Figure 12.png Graphic file (type png)
+<use img/Figure 12.png>
+Package pdftex.def Info: img/Figure 12.png  used on input line 403.
 (pdftex.def)             Requested size: 345.0pt x 163.28679pt.
- [22 <./Figure 12.png>] [23]
+ [23 <./img/Figure 12.png>] [24]
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <9> not available
 (Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 468.
- [24] [25] [26]
-<Figure 13.jpeg, id=119, 2197.20876pt x 1259.70625pt>
-File: Figure 13.jpeg Graphic file (type jpg)
-<use Figure 13.jpeg>
-Package pdftex.def Info: Figure 13.jpeg  used on input line 584.
+ [25] [26] [27]
+<img/Figure 13.jpeg, id=122, 2197.20876pt x 1259.70625pt>
+File: img/Figure 13.jpeg Graphic file (type jpg)
+<use img/Figure 13.jpeg>
+Package pdftex.def Info: img/Figure 13.jpeg  used on input line 584.
 (pdftex.def)             Requested size: 345.0pt x 197.78969pt.
-<Figure 14.jpeg, id=120, 2135.98pt x 1295.84125pt>
-File: Figure 14.jpeg Graphic file (type jpg)
-<use Figure 14.jpeg>
-Package pdftex.def Info: Figure 14.jpeg  used on input line 590.
+<img/Figure 14.jpeg, id=123, 2135.98pt x 1295.84125pt>
+File: img/Figure 14.jpeg Graphic file (type jpg)
+<use img/Figure 14.jpeg>
+Package pdftex.def Info: img/Figure 14.jpeg  used on input line 590.
 (pdftex.def)             Requested size: 345.0pt x 209.29636pt.
-<Figure 15.jpeg, id=121, 2034.60126pt x 1325.95375pt>
-File: Figure 15.jpeg Graphic file (type jpg)
-<use Figure 15.jpeg>
-Package pdftex.def Info: Figure 15.jpeg  used on input line 596.
+<img/Figure 15.jpeg, id=124, 2034.60126pt x 1325.95375pt>
+File: img/Figure 15.jpeg Graphic file (type jpg)
+<use img/Figure 15.jpeg>
+Package pdftex.def Info: img/Figure 15.jpeg  used on input line 596.
 (pdftex.def)             Requested size: 345.0pt x 224.82242pt.
- [27 <./Figure 13.jpeg>] [28 <./Figure 14.jpeg> <./Figure 15.jpeg>] [29] [30] [31] [32] [33] [34] [35] [36] [37] [38] [39] [40] [41]
-<Figure 16.png, id=170, 310.15875pt x 304.13625pt>
-File: Figure 16.png Graphic file (type png)
-<use Figure 16.png>
-Package pdftex.def Info: Figure 16.png  used on input line 1219.
+ [28 <./img/Figure 13.jpeg>] [29 <./img/Figure 14.jpeg> <./img/Figure 15.jpeg>] [30] [31] [32] [33] [34] [35] [36] [37] [38] [39] [40] [41] [42]
+<img/Figure 16.png, id=173, 310.15875pt x 304.13625pt>
+File: img/Figure 16.png Graphic file (type png)
+<use img/Figure 16.png>
+Package pdftex.def Info: img/Figure 16.png  used on input line 1227.
 (pdftex.def)             Requested size: 172.5pt x 169.1503pt.
- [42 <./Figure 16.png>] [43] [44] [45] [46]
-Overfull \hbox (54.88885pt too wide) in paragraph at lines 1379--1381
+ [43] [44 <./img/Figure 16.png>] [45] [46] [47]
+Overfull \hbox (54.88885pt too wide) in paragraph at lines 1387--1389
 [][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[47] [48] (./nea.aux) ) 
+[48] [49] [50] (./nea.aux) ) 
 Here is how much of TeX's memory you used:
- 6357 strings out of 476025
- 96423 string characters out of 5790017
- 1943388 words of memory out of 5000000
+ 6358 strings out of 476025
+ 96811 string characters out of 5790017
+ 1942388 words of memory out of 5000000
  26753 multiletter control sequences out of 15000+600000
  517679 words of font info for 51 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,7n,63p,1086b,1692s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmitt10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on nea.pdf (48 pages, 2881398 bytes).
+Output written on nea.pdf (50 pages, 2883661 bytes).
 PDF statistics:
- 241 PDF objects out of 1000 (max. 8388607)
- 140 compressed objects within 2 object streams
+ 248 PDF objects out of 1000 (max. 8388607)
+ 145 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  81 words of extra memory for PDF output out of 10000 (max. 10000000)
 
