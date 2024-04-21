@@ -10,6 +10,7 @@
             <button type="submit">Add Exercise</button>
         </form>
         <h1>Exercise Bank</h1>
+        {% comment %} If a user has exercises, iterates through them providing a deletion form for each instance which appends the exercise.id onto the URL {% endcomment %}
         {% if user_exercises %}
         <ul>
             {% for exercise in user_exercises %}

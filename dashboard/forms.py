@@ -5,10 +5,11 @@ from .models import Exercise
 class CreateExerciseForm(ModelForm):
     class Meta:
         model = Exercise
-        fields = ['name']
+        fields = ["name"]
 
+    # Overrides inherited method to extract user from the keyword arguments. Once complete, hands back the rest of the arguments to the supermethod for regular processing
     def __init__(self, *args, **kwargs):
-        self.user = kwargs.pop('user', None)
+        self.user = kwargs.pop("user", None)
         super(CreateExerciseForm, self).__init__(*args, **kwargs)
 
     def save(self, commit=True):

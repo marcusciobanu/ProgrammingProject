@@ -22,9 +22,11 @@ class Set(models.Model):
     workout_exercise = models.ForeignKey(WorkoutExercise, on_delete=models.CASCADE)
     weight = models.FloatField(help_text="Weight used for the set")
     SET_TYPES = [
-        ('warmup', 'Warmup'),
-        ('dropset', 'Dropset'),
-        ('failure', 'Failure'),
+        ("warmup", "Warmup"),
+        ("dropset", "Dropset"),
+        ("failure", "Failure"),
     ]
-    set_type = models.CharField(max_length=7, choices=SET_TYPES, help_text="Type of the set")
+    set_type = models.CharField(
+        max_length=7, choices=SET_TYPES, help_text="Type of the set"
+    )
     reps = models.IntegerField(help_text="Number of repetitions")

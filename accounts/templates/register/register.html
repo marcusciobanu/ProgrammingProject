@@ -6,6 +6,7 @@
 <div class="wrapper">
     <form method="post" action="{% url 'registerpage' %}">
         {% csrf_token %}
+        {% comment %} All of the relevant fields for registration {% endcomment %}
         <h1>Registration</h1>
         <div class="inputbox">
             <div class="inputfield">
@@ -34,10 +35,10 @@
             </div>
             <div class="inputfield">
                 <input type="password" name="password2" placeholder="Confirm Password" {% if form.password2.value %} value="{{ form.password2.value }}" {% endif %} required>
-                
                 <i class='bx bxs-key'></i>
             </div>
         </div>
+        {% comment %} Creates error box by iterating through error dictionary {% endcomment %}
         {% if form.errors %}
         <div class="error-message">
             <ul>
